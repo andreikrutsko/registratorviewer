@@ -1,6 +1,7 @@
-Microsoft Windows SDK shader compiler sidecar: delivery review pending
+Microsoft Windows SDK d3dcompiler_47.dll: owner-approved delivery
 
-Bundled filename: d3dcompiler_43.dll
+Original component: d3dcompiler_47.dll
+Bundled compatibility filename: d3dcompiler_43.dll
 SHA-256: 4b074a3976399dc735484f5d43d04b519b7bdee8ac719d9ab8ed6bd4e6be0345
 File version: 10.0.18362.1 (WinBuild.160101.0800)
 Product version: 10.0.18362.1
@@ -22,10 +23,11 @@ This is a proprietary Microsoft component, not a GPL/LGPL library. The Windows
 SDK license and its referenced REDIST list provide the conditional distribution
 basis for the unmodified x64 compiler_47 object code in Classic Windows apps.
 The full SDK license text is included separately in this offline catalog.
-Owner review of the renamed file, self-extracting delivery, Windows-only use,
-SDK license requirements/restrictions and the complete integration is pending.
+The owner explicitly approved the renamed file, self-extracting delivery,
+Windows-only use, SDK license conditions and current integration on 2026-10-25.
 This audit notice does not itself grant a license or apply a metadata waiver.
-Overall public distribution remains blocked by incomplete compliance review.
+The identified compiler is approved for this project release by the owner.
+This decision does not modify Microsoft's SDK license conditions.
 
 Official byte-matching package:
 https://www.nuget.org/packages/Microsoft.Windows.SDK.CPP/10.0.18362.5

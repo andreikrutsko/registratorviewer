@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "manifestVersion": "2026-10-25.4",
+  "manifestVersion": "2026-10-25.6",
   "backend": "separate-process-json-ipc-and-cli",
   "architecture": "win-x64",
-  "approvalStatus": "LEGAL_REVIEW_REQUIRED",
+  "approvalStatus": "APPROVED",
   "packages": [
     {
       "id": "mpv",
@@ -84,7 +84,7 @@
         "Normaliz.dll",
         "d2d1.dll"
       ],
-      "reviewStatus": "LEGAL_REVIEW_REQUIRED",
+      "reviewStatus": "APPROVED",
       "correspondingSourceMaterials": [],
       "provider": "shinchiro/mpv-winbuild-cmake",
       "pathInDistribution": "embedded media-tools.payload.zip/mpv.exe",
@@ -97,7 +97,10 @@
         "regularImportsEvidence": "staticImports",
         "delayAndDynamic": "PARTIAL; observed paths do not cover every codec/GPU/plugin",
         "staticallyLinked": "INCOMPLETE; see transitiveReview and evidence/transitive-recipe-candidates.json"
-      }
+      },
+      "auditStatusBeforeOwnerApproval": "LEGAL_REVIEW_REQUIRED",
+      "approvalBasis": "EXPLICIT_OWNER_APPROVAL",
+      "ownerDecisionPath": "docs/licensing/owner-distribution-decision.json"
     },
     {
       "name": "d3dcompiler_43.dll",
@@ -126,7 +129,7 @@
         "api-ms-win-crt-time-l1-1-0.dll",
         "RPCRT4.dll"
       ],
-      "reviewStatus": "LEGAL_REVIEW_REQUIRED",
+      "reviewStatus": "APPROVED",
       "correspondingSourceMaterials": [],
       "provider": "Microsoft Corporation (signed file); redistributed by shinchiro",
       "pathInDistribution": "embedded media-tools.payload.zip/d3dcompiler_43.dll",
@@ -135,12 +138,17 @@
         "docs/licensing/evidence/d3dcompiler-comparison.json",
         "docs/licensing/evidence/windows-sdk-compiler.json"
       ],
-      "licenseBasis": "Byte-identical official Windows SDK x64 compiler_47 redist; Microsoft SDK Distributable Code terms and REDIST list apply conditionally. Renamed/self-extracting delivery review pending.",
+      "licenseBasis": "Byte-identical official Windows SDK CPP 10.0.18362.5 x64 d3dcompiler_47.dll, shipped under the supplier compatibility alias d3dcompiler_43.dll. SDK Distributable Code terms and REDIST list apply. The owner approved the identified renamed/self-extracting Windows-only delivery.",
       "dependencies": {
         "regularImportsEvidence": "staticImports",
         "delayAndDynamic": "PARTIAL; observed paths do not cover every codec/GPU/plugin",
         "staticallyLinked": "Microsoft proprietary implementation; not treated as GPL/LGPL source"
-      }
+      },
+      "auditStatusBeforeOwnerApproval": "LEGAL_REVIEW_REQUIRED",
+      "approvalBasis": "EXPLICIT_OWNER_APPROVAL",
+      "ownerDecisionPath": "docs/licensing/owner-distribution-decision.json",
+      "originalFileName": "d3dcompiler_47.dll",
+      "distributedFileName": "d3dcompiler_43.dll"
     },
     {
       "name": "ffmpeg.exe",
@@ -192,7 +200,7 @@
         "WINMM.dll",
         "WS2_32.dll"
       ],
-      "reviewStatus": "LEGAL_REVIEW_REQUIRED",
+      "reviewStatus": "APPROVED",
       "correspondingSourceMaterials": [],
       "provider": "Gyan Doshi / codexffmpeg",
       "pathInDistribution": "embedded media-tools.payload.zip/ffmpeg.exe",
@@ -205,7 +213,10 @@
         "regularImportsEvidence": "staticImports",
         "delayAndDynamic": "PARTIAL; observed paths do not cover every codec/GPU/plugin",
         "staticallyLinked": "INCOMPLETE; see transitiveReview and evidence/transitive-recipe-candidates.json"
-      }
+      },
+      "auditStatusBeforeOwnerApproval": "LEGAL_REVIEW_REQUIRED",
+      "approvalBasis": "EXPLICIT_OWNER_APPROVAL",
+      "ownerDecisionPath": "docs/licensing/owner-distribution-decision.json"
     },
     {
       "name": "ffprobe.exe",
@@ -256,7 +267,7 @@
         "WINMM.dll",
         "WS2_32.dll"
       ],
-      "reviewStatus": "LEGAL_REVIEW_REQUIRED",
+      "reviewStatus": "APPROVED",
       "correspondingSourceMaterials": [],
       "provider": "Gyan Doshi / codexffmpeg",
       "pathInDistribution": "embedded media-tools.payload.zip/ffprobe.exe",
@@ -269,7 +280,10 @@
         "regularImportsEvidence": "staticImports",
         "delayAndDynamic": "PARTIAL; observed paths do not cover every codec/GPU/plugin",
         "staticallyLinked": "INCOMPLETE; see transitiveReview and evidence/transitive-recipe-candidates.json"
-      }
+      },
+      "auditStatusBeforeOwnerApproval": "LEGAL_REVIEW_REQUIRED",
+      "approvalBasis": "EXPLICIT_OWNER_APPROVAL",
+      "ownerDecisionPath": "docs/licensing/owner-distribution-decision.json"
     }
   ],
   "ffmpegConfigureFlags": [
@@ -396,21 +410,25 @@
     "zlib"
   ],
   "transitiveReview": {
-    "status": "UNKNOWN",
-    "reason": "Static library versions, complete corresponding sources, patches and build recipes are not all established. Dynamic system/driver imports are listed per PE; clean Windows Vulkan loader availability is unverified."
+    "status": "APPROVED",
+    "reason": "Owner explicitly approved the documented transitive dependency risks; owner reports checking Vulkan on clean Windows and accepts remaining compatibility risk. Missing source/build/patch materials remain factually incomplete under correspondingSourcePolicy.",
+    "auditStatusBeforeOwnerApproval": "UNKNOWN",
+    "approvalBasis": "EXPLICIT_OWNER_APPROVAL",
+    "ownerDecisionPath": "docs/licensing/owner-distribution-decision.json",
+    "auditFindingBeforeOwnerApproval": "Static library versions, complete corresponding sources, patches and build recipes are not all established. Dynamic system/driver imports are listed per PE; clean Windows Vulkan loader availability is unverified."
   },
   "integrationReview": {
-    "status": "LEGAL_REVIEW_REQUIRED",
+    "status": "APPROVED",
     "assessment": {
       "path": "docs/licensing/independent-process-assessment.md",
-      "sha256": "2681b0bea2b15040b1a581e644bbe6e608c3cbf80b3a19f3c4cc57edf676d9dc"
+      "sha256": "21db3c06881fc5f7d60dc1395c06ce14b1b8513c7a9a7c89842d695e77bef058"
     },
     "files": {
       ".gitattributes": "2468551bcdb9e70838f9df990b7ee4dae16b660aa7aa3fc10eff8f4d603b6a05",
       ".github/workflows/announce-telegram.yml": "4b6cb4fbaf90264500220cbba0b2a006560b871f9a0394d73695a1d79f1fbdd7",
       ".github/workflows/release.yml": "870b73b7e2ea1477662cca0fc5e6fb8ffe60779ff2736e9d8bdca70fcbf4e5b8",
       "Directory.Build.props": "2fb5dfc0cbec59658e809beac5b5488b573f328238e10086400b54f2106f388f",
-      "THIRD_PARTY_NOTICES.md": "adc2fabe3cebff9f78823f2da0eb37e1de618b2bfc277d4ffb4085c932c3d37a",
+      "THIRD_PARTY_NOTICES.md": "3fd66817733374455f6bd2246a72aab520087de61fb70cab668c2274d6763ec1",
       "build.ps1": "aa41c7ac4f0cfa61388383725fc1901ea3f29555a7a24f86b59920c1846d229f",
       "build/RegistratorViewer.Metadata.targets": "67d466ae9dd3aa44ddb57bebbb8eb6a56ed440c7d3f8af2c2171a3c326906a75",
       "distribution/public/.gitattributes": "ee7db148aaf760b402090a4cde6e66eca5a2e6ac57e922322fc9c5e210e014ed",
@@ -419,7 +437,7 @@
       "licenses/FFmpeg-build.txt": "0342de6bb39dd421cbec2c00d89ad274b640d75ad3f2cab09ffd647ce2d8f949",
       "licenses/GPL-2.0.txt": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6",
       "licenses/GPL-3.0.txt": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
-      "licenses/Microsoft-D3DCompiler-audit.txt": "970e0df718aae2fee938336867b5824333c6139365ed27243fa062aea8ef5dc5",
+      "licenses/Microsoft-D3DCompiler-audit.txt": "37f3c4852f1470c95cb1e3d8b3fd027db8f64a0f42577af68fae95b927493136",
       "licenses/Microsoft-Windows-SDK-LICENSE.txt": "aba32b705ea9716ba8b6e1cb464016e1709256214022fc132d49bb0572c33406",
       "licenses/WebView2-NOTICE.txt": "106423785c5b7eba0a8e61d1837f2132e9c828e20ad530f565d981c1df60dd90",
       "licenses/WindowsDesktop-10.0.13-LICENSE.txt": "a89886665765362eb77e0f8e26602c924520041d1711b2eedc136434fe4d01ab",
@@ -525,21 +543,28 @@
       "tools/Test-LocalizationStartup.ps1": "af26b0db59c7db29b995ce617a7b3a12abc8df9217b768eaef4fedc64d735a7d",
       "tools/build_metadata.py": "3b65ad0e0184689fc32644da83a6fcd4e4bc95230feac89ff644cade9ab5c939",
       "tools/ci/bundle_inventory.py": "112f2caf16593bfa7d524de303e893a53375ab501f44c4e9a80b04088eac7786",
-      "tools/ci/check_media_compliance.py": "865d22d9cda455f703f21e6c7701b61bb0864f9df204503789ce7a7174b2cf2d",
+      "tools/ci/check_media_compliance.py": "1107e01a32b27ee419babe63b464fd66fa6ade4e72b3cf98860a232b44abc1ef",
       "tools/ci/check_public_tree.py": "469170bb8145d952e62ba4b55cf5b90c5aebb1e20042f4ccc66cf6fc9e74ed66",
-      "tools/ci/distribution_policy.py": "6c52121ba35f91ce637c10fb0bde722189d1e79854b1cdc8c842ceb211822f01",
-      "tools/ci/prepare_release_sources.py": "02c3e22076ecb8978c56e2c7f6024e2f59106b57b38cca50e00db7da359de5a0",
+      "tools/ci/distribution_policy.py": "a5d1f6d3f5277e02c33402b6d63ea83450207f6f569c93d99c479c4dd0f9f18c",
+      "tools/ci/prepare_release_sources.py": "a6019281bab541ce16dd2357d95f88289aceafa11d6722d1711079d86f0514a4",
       "tools/ci/publish_release.py": "8741eb5a6a775fc2461581fc2c271915496f87ccdd4672dc5ae1b1f2891ddc59",
       "tools/ci/release_compliance_assets.py": "b207df3e36e6b1a19e47b3582847de8a9c92a3fe6dfbb15b45273543e0966822",
       "tools/ci/telegram.py": "abd5f48ee1f09108261e52ef385dacb05b9834bd591e06d1ef14b81fc28d8cb6",
       "tools/prepare-map-dependencies.py": "c75e6f463e0d4367ffbc4694c28d901ea7315d3b170ca3b3264526c9ab5add85",
-      "tools/prepare-runtime-dependencies.ps1": "4022d8f80e20f18f363df0f7a787b1fd9027de7497c65a3d92f9acf0e8a2dd7f"
-    }
+      "tools/prepare-runtime-dependencies.ps1": "4022d8f80e20f18f363df0f7a787b1fd9027de7497c65a3d92f9acf0e8a2dd7f",
+      "docs/licensing/owner-distribution-decision.json": "04fabf2cd75ff7a3ccffac3cd49d52d02ef7a5846419f11058b08693ebc33c3b"
+    },
+    "auditStatusBeforeOwnerApproval": "LEGAL_REVIEW_REQUIRED",
+    "approvalBasis": "EXPLICIT_OWNER_APPROVAL",
+    "ownerDecisionPath": "docs/licensing/owner-distribution-decision.json"
   },
   "distributionReview": {
-    "status": "INCOMPLETE",
+    "status": "COMPLETE",
     "inventoryPath": "docs/licensing/distribution-inventory.json",
-    "inventorySha256": "87fd2e4ec85e9f959088acd1d19b4f9a6407b6fd33781d85cf62f08be4832ea9"
+    "inventorySha256": "1aec6e36705cdd6991ad239ff76b108df789854045e281b25e4ad9f8a89fdf42",
+    "auditStatusBeforeOwnerApproval": "INCOMPLETE",
+    "approvalBasis": "EXPLICIT_OWNER_APPROVAL",
+    "ownerDecisionPath": "docs/licensing/owner-distribution-decision.json"
   },
   "releaseMaterials": [],
   "sourceCandidates": [
@@ -571,5 +596,17 @@
       "bytes": 177053,
       "status": "PARTIAL_BUILD_RECIPES_AND_PATCHES"
     }
-  ]
+  ],
+  "correspondingSourcePolicy": {
+    "mode": "OWNER_ACCEPTED_RISK",
+    "decisionPath": "docs/licensing/source-risk-acceptance.json",
+    "decisionSha256": "6b22b8ab6b5ead5fe8f8750453386d0f2c9fef5978e773b008785961b59cb692"
+  },
+  "auditStatusBeforeOwnerApproval": "LEGAL_REVIEW_REQUIRED",
+  "ownerApproval": {
+    "decisionPath": "docs/licensing/owner-distribution-decision.json",
+    "decisionSha256": "04fabf2cd75ff7a3ccffac3cd49d52d02ef7a5846419f11058b08693ebc33c3b",
+    "basis": "EXPLICIT_OWNER_APPROVAL",
+    "recordedUtc": "2026-10-25T16:58:30+00:00"
+  }
 }
