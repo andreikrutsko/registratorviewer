@@ -1,0 +1,37 @@
+Microsoft Windows SDK shader compiler sidecar: delivery review pending
+
+Bundled filename: d3dcompiler_43.dll
+SHA-256: 4b074a3976399dc735484f5d43d04b519b7bdee8ac719d9ab8ed6bd4e6be0345
+File version: 10.0.18362.1 (WinBuild.160101.0800)
+Product version: 10.0.18362.1
+Company: Microsoft Corporation
+Product: Microsoft Windows Operating System
+Copyright: Microsoft Corporation. All rights reserved.
+
+Windows Authenticode validates the Microsoft signature on the inspected file.
+This copy comes from the pinned mpv distributor archive. Its original/internal
+name is d3dcompiler_47.dll. It is BYTE-IDENTICAL to this official package entry:
+Microsoft.Windows.SDK.CPP 10.0.18362.5 / c/Redist/D3D/x64/d3dcompiler_47.dll.
+The distributor changed the filename, not the signed DLL bytes.
+
+The initially compared D3DCompiler_43.dll from Microsoft.DXSDK.D3DX 9.29.952.8
+is a different component version (9.29.952.3111). Its license was not used as
+the redistribution basis for the actual compiler_47 bytes.
+
+This is a proprietary Microsoft component, not a GPL/LGPL library. The Windows
+SDK license and its referenced REDIST list provide the conditional distribution
+basis for the unmodified x64 compiler_47 object code in Classic Windows apps.
+The full SDK license text is included separately in this offline catalog.
+Owner review of the renamed file, self-extracting delivery, Windows-only use,
+SDK license requirements/restrictions and the complete integration is pending.
+This audit notice does not itself grant a license or apply a metadata waiver.
+Overall public distribution remains blocked by incomplete compliance review.
+
+Official byte-matching package:
+https://www.nuget.org/packages/Microsoft.Windows.SDK.CPP/10.0.18362.5
+SDK license endpoint declared by that exact package:
+https://aka.ms/WinSDKLicenseURL
+Referenced redistribution list:
+https://learn.microsoft.com/en-us/legal/windows-sdk/redist
+Pinned distributor build provenance:
+https://github.com/shinchiro/mpv-winbuild-cmake/tree/b2856ee6deed6957380b32465f359e67f67fafd8
