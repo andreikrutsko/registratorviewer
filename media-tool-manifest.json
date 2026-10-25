@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "manifestVersion": "2026-10-25.7",
+  "manifestVersion": "2026-10-25.8",
   "backend": "separate-process-json-ipc-and-cli",
   "architecture": "win-x64",
   "approvalStatus": "APPROVED",
@@ -426,7 +426,7 @@
     "files": {
       ".gitattributes": "2468551bcdb9e70838f9df990b7ee4dae16b660aa7aa3fc10eff8f4d603b6a05",
       ".github/workflows/announce-telegram.yml": "4b6cb4fbaf90264500220cbba0b2a006560b871f9a0394d73695a1d79f1fbdd7",
-      ".github/workflows/release.yml": "b8bfa006aa8ccdc7081bf3ea75fc50fdd67701552f6a0231709d0999e4e47aa3",
+      ".github/workflows/release.yml": "a437d5738aec3dc95b8e8713cc071b4d4a25d962fee787a59247ac60d1e02478",
       "Directory.Build.props": "2fb5dfc0cbec59658e809beac5b5488b573f328238e10086400b54f2106f388f",
       "THIRD_PARTY_NOTICES.md": "3fd66817733374455f6bd2246a72aab520087de61fb70cab668c2274d6763ec1",
       "build.ps1": "aa41c7ac4f0cfa61388383725fc1901ea3f29555a7a24f86b59920c1846d229f",
@@ -551,7 +551,7 @@
       "tools/ci/prepare_release_sources.py": "a6019281bab541ce16dd2357d95f88289aceafa11d6722d1711079d86f0514a4",
       "tools/ci/publish_release.py": "8741eb5a6a775fc2461581fc2c271915496f87ccdd4672dc5ae1b1f2891ddc59",
       "tools/ci/release_compliance_assets.py": "b207df3e36e6b1a19e47b3582847de8a9c92a3fe6dfbb15b45273543e0966822",
-      "tools/ci/release_tag.py": "b04036aa696623a7606655946ca80a9f75e5fbc225d72b574ed66e4389099607",
+      "tools/ci/release_tag.py": "684d5a3d016e9810fc43832aefe0472d6b0e7bbfb52d0ecef2c60d0bdd19e3c5",
       "tools/ci/telegram.py": "abd5f48ee1f09108261e52ef385dacb05b9834bd591e06d1ef14b81fc28d8cb6",
       "tools/prepare-map-dependencies.py": "c75e6f463e0d4367ffbc4694c28d901ea7315d3b170ca3b3264526c9ab5add85",
       "tools/prepare-runtime-dependencies.ps1": "4022d8f80e20f18f363df0f7a787b1fd9027de7497c65a3d92f9acf0e8a2dd7f"
