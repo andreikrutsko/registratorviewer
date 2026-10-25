@@ -539,7 +539,7 @@
   "distributionReview": {
     "status": "INCOMPLETE",
     "inventoryPath": "docs/licensing/distribution-inventory.json",
-    "inventorySha256": "4bb8589cf07278e5d7f6a6d2cc90ed8083ae4edefec0fff43986177ff3018981"
+    "inventorySha256": "87fd2e4ec85e9f959088acd1d19b4f9a6407b6fd33781d85cf62f08be4832ea9"
   },
   "releaseMaterials": [],
   "sourceCandidates": [

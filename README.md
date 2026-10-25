@@ -10,7 +10,7 @@ Use the [Releases page](https://github.com/andreikrutsko/registratorviewer/relea
 
 Application source is private and is not distributed in this repository. Distribution terms and native dependency/source obligations must be finalized before the first binary is published. Offline full license texts are accessible through **? → Third-party Licenses** and About.
 
-See the [exact media manifest](media-tool-manifest.json), [third-party notices](THIRD_PARTY_NOTICES.md) and [full license texts](THIRD_PARTY_LICENSES/). Approved binary releases must include notices, full licenses and complete corresponding-source assets for covered third-party components at the same time as the executable. These compliance assets are separate from the single EXE required to run the application; automatic GitHub documentation archives do not replace them. Publication approval remains pending.
+See the [exact media manifest](media-tool-manifest.json), [third-party notices](THIRD_PARTY_NOTICES.md) and [full license texts](THIRD_PARTY_LICENSES/). Approved binary releases must include notices, full licenses and complete corresponding-source assets for covered third-party components at the same time as the executable. These compliance assets are separate from the single EXE required to run the application; automatic GitHub documentation archives do not replace them. Binary publication remains subject to complete source and distribution checks.
 
 Telegram updates: https://t.me/RegistratorViewer
 
