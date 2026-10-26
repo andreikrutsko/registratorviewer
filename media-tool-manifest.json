@@ -421,7 +421,7 @@
     "status": "APPROVED",
     "assessment": {
       "path": "docs/licensing/independent-process-assessment.md",
-      "sha256": "6703ebe1cdeb6358296f16cef78efc370e68822151d3504501da7e128a9a3ede"
+      "sha256": "e9feb4f8af4228a2c0af24a4ed7acc29c77af073c241485dd1eac4ca067c3131"
     },
     "files": {
       ".gitattributes": "2468551bcdb9e70838f9df990b7ee4dae16b660aa7aa3fc10eff8f4d603b6a05",
@@ -497,8 +497,8 @@
       "src/RegistratorViewer.Next.Desktop/FileChromeButton.cs": "c6e1b82123afca097b0c0a6a0cb27e8e42a05044b035d6192a36f79cfadd6b8d",
       "src/RegistratorViewer.Next.Desktop/FilePresentation.cs": "98cbc07083e9e0d8bd5deab0820226f87edf0ea627ee61f86a184db3b76b80cc",
       "src/RegistratorViewer.Next.Desktop/GroupSession.cs": "a246ca7363c8aaac1c3859b7f94567350c2393b04a064d3aebc993ab6befb978",
-      "src/RegistratorViewer.Next.Desktop/HelpMenu.cs": "11b6d73fbf3952b53ce5e762fccbe8cd41ba4619f0e7bc354d7aeabcac6f7603",
-      "src/RegistratorViewer.Next.Desktop/HelpMenuIcons.cs": "6efbbdba181f647f9e2e5ed89396900a84c4ff738ce34099775a844f2cfe9200",
+      "src/RegistratorViewer.Next.Desktop/HelpMenu.cs": "ec29581d118e66cc808b5c8bcf84560bb41815bf8115882d8005a71016a49d8f",
+      "src/RegistratorViewer.Next.Desktop/HelpMenuIcons.cs": "96ddd3539688aed5d537e39adc4ea653c4aa45c6531bcfa23b31b39cc1938b35",
       "src/RegistratorViewer.Next.Desktop/ImageExportService.cs": "187260c7c73323a7631bc1893acf7425feadf8f97bc9cfe0fef0ba3aab0f69b6",
       "src/RegistratorViewer.Next.Desktop/InstrumentsCanvas.cs": "5d14ef5d5647a3db40af3ccfecae0a197f73bc9bbfe31bc574d9220c90f8b278",
       "src/RegistratorViewer.Next.Desktop/LegacyUiShell.cs": "f5723e603d6cca1f7aa35025176fd4267c19ee15fe4ec04b92c7e9404764a2ca",
@@ -507,7 +507,7 @@
       "src/RegistratorViewer.Next.Desktop/Localization/LocalizationSettingsRepository.cs": "60d989d3dda082d036f4af00a74c7c52dbe074de7c71c63be5822844d69fd22d",
       "src/RegistratorViewer.Next.Desktop/Localization/LocalizedMessageBox.cs": "6e0f8d412b6eb68d85d85b9e390637b2d6dc75e198f45f897276d04081f3e4fd",
       "src/RegistratorViewer.Next.Desktop/Localization/UiMessageBoxAlias.cs": "c8ebeda5930871ba88104c4ddcc8ed95ec1447c24f948e922969ad5ee7dfee6e",
-      "src/RegistratorViewer.Next.Desktop/MainForm.cs": "bff757f3e225125f5ec3dd12a96391b6866b0079fa3d16b8126857b9bb5cad01",
+      "src/RegistratorViewer.Next.Desktop/MainForm.cs": "1fdcc00eb03ae12a13f85bd0b2225fe11889f98ab7ec0a1885387c6e0d0abf8f",
       "src/RegistratorViewer.Next.Desktop/MapChromeButton.cs": "1def66eea54cc00d587797be4e587dfe85e316fceffa0074af4ad74dbd2d3150",
       "src/RegistratorViewer.Next.Desktop/Maps/AssemblyVisibility.cs": "ee9cafab56b4dcddcfc3436ce773c436b95e14a0e475702778bc1430f4fbbf29",
       "src/RegistratorViewer.Next.Desktop/Maps/GoogleMapsKeyStore.cs": "350c2d8bfb44af1df78adc89307edaa5d5d0451764bbaed60249951d42f4bdb7",
@@ -564,7 +564,9 @@
       "tools/prepare-runtime-dependencies.ps1": "4022d8f80e20f18f363df0f7a787b1fd9027de7497c65a3d92f9acf0e8a2dd7f",
       "src/RegistratorViewer.Next.Core/IsoBmff/Mp4SampleTable.cs": "e54bd533deb8d1b8238773b9d6ecfaec0f05d1bf07e655ddf21f896d76a10614",
       "src/RegistratorViewer.Next.Core/IsoBmff/NativeGpsMuxer.cs": "8699394a84476e28744767a9036878cb14c32fab0a47146c380fe738cc7355a8",
-      "tools/ci/release_notes.py": "5e4385d7f7e8f38ca328f46b5672675d10911d282dd50569cb77f29d001fb487"
+      "tools/ci/release_notes.py": "5e4385d7f7e8f38ca328f46b5672675d10911d282dd50569cb77f29d001fb487",
+      "src/RegistratorViewer.Next.Core/Updates/GitHubReleaseChecker.cs": "babda049ad4e77ae0dfbb4d524ef967b7f952f051d425cc4a28f9ef67577e419",
+      "src/RegistratorViewer.Next.Desktop/UpdateChecks.cs": "39aacf43f4bacd7688daafa387083b021fb37e26b04052acaa940590071356b8"
     },
     "auditStatusBeforeOwnerApproval": "LEGAL_REVIEW_REQUIRED",
     "approvalBasis": "EXPLICIT_OWNER_APPROVAL",
