@@ -8,7 +8,15 @@ Indexed 16 KiB GPS MP4 recordings are detected automatically. Native GPS blocks 
 
 ## Supported Models
 
-Full model-level verification is pending. Models will be listed here after all recorded data channels and the complete playback/editing workflow pass validation.
+Full support for the data channels present in the tested MOV/MP4 recording variants:
+
+- **70mai:** A810-2, T800 4K.
+- **BlackVue:** ELITE 9.
+- **CARCAM:** R2s.
+- **Garmin:** Dash Cam 57.
+- **Lexand:** LR300.
+- **Street Guardian:** SGGCX2Pro+.
+- **VIOFO:** A119 Mini, A119 V3, A119M Pro, A119S, A129 Plus Duo, A129 Pro, A139, A229, A329, A329S.
 
 ## Downloads
 
