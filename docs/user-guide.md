@@ -23,3 +23,7 @@ RegistratorViewer.Next checks for a newer stable GitHub release once after start
 ## Camera groups
 
 Front (A) and rear (B) recordings stay in separate groups, even when their times and codecs match. Manual grouping also rejects mixed A/B selections. Recognized recording metadata remains authoritative. When it is unavailable, supported timestamped filenames, including yyyy_MMdd_HHmmss, provide a fallback; the configured gap tolerance and stream compatibility checks still apply.
+
+## GPS acquisition
+
+If a recording starts before GPS fixation, its initial missing interval stays empty on the timeline. Invalid fixes also leave gaps in speed, map position and instruments. Cutting/joining preserves those media times and raw GPS blocks, including missing-fix status. Previously exported files with an incorrect old GPS timing archive are not repaired automatically; reopen the original recording and export again.
