@@ -10,6 +10,25 @@ The instrument cluster shows speed, current track distance, available recorded a
 
 Map tools support pan, route seeking, measurement, fit and combined position/heading follow. A manual map pan suspends following; Recenter resumes it. Choose an open map provider or configure a user-owned Google Maps API key. Provider labels and attribution remain visible.
 
+## Cutting and joining
+
+Compatible video and audio are copied without re-encoding. If a stream cannot
+be copied for the selected output, the application asks before re-encoding it
+or exporting without it. Re-encoding takes longer and can change quality;
+other compatible streams remain copied. Video recovery uses H.264 at the first
+clip's frame size/rate, and audio recovery uses AAC. Ordinary playback never
+converts the recording on disk.
+
+In Cutting, an affected export checkbox is gray and disabled after this choice.
+Use **Stream options** to change the decision. Absent streams are unavailable;
+excluding video can create an audio-only file. Cancel leaves no completed output.
+Copying video uses complete GOPs; explicitly re-encoded video follows source-frame
+boundaries. Review the prepared range before starting.
+
+Unexpected copy failures can offer a confirmed retry with re-encoding. The
+application never switches to encoding silently. Retry can still fail, and
+filesystem/access problems are reported separately.
+
 ## Video renderer
 
 Choose **Settings > Renderer > Auto (Vulkan preferred)** or **Direct3D 11 (D3D11VA)**. Auto is the default and can try D3D11 once if Vulkan output initialization fails. A change restarts only the video process, retaining the current position, pause/play, speed, audio, group, timeline, A-B loop and fullscreen/zoom/flips. Expect a short video interruption. The preference is saved for later sessions.
