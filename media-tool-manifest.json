@@ -686,7 +686,7 @@
       "tools/ci/sync_public_tree.py": "a8136e9707b0c81294f6d86e5d18ab39bcf88e15b4dc5e50102f39ae6562070b",
       "tools/ci/telegram.py": "6d79eb12a68eeb543055af8f6dd87fc144ab263edf6bac46ead0e9b717384167",
       "tools/ci/version_ledger.py": "0c36ab5bffce6d40284f18014a0dbc38409071db43985506496ee22bdf180819",
-      "tools/package_avalonia.py": "d1bf353ef39a5c9c0d3292e79974f19c3a1a1a042e0fde9d54292e76ca719392",
+      "tools/package_avalonia.py": "8ac540b640996e5966aed309611978c352b1563422d6595ece9a40c9c451931f",
       "tools/prepare-map-dependencies.py": "200b7b4c9dafd457f65bd14a43a4370c8185c5543ba3c1636f4d86489fcefce0",
       "tools/prepare-runtime-dependencies.ps1": "4022d8f80e20f18f363df0f7a787b1fd9027de7497c65a3d92f9acf0e8a2dd7f",
       "tools/prepare_desktop_release_metadata.py": "63f4ddd3f9b736d0de784ccd3dadced7f6c57491221c319d1050cbcb259ef3ab",
