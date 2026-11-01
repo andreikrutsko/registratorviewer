@@ -8,6 +8,14 @@ Double-click the video to enter video fullscreen; Escape returns. Choose a langu
 
 The instrument cluster shows speed, current track distance, available recorded altitude, compass heading and acceleration. Missing values use dashes. Details/F8 also controls the instrument hover tooltips: altitude/distance/speed, compass direction and instantaneous X/Y/Z. Metric/British units apply to the instruments and their hover text together.
 
+**View > Measurement** also updates file-list speed/distance captions and values,
+charts, maps and hover text immediately. **View > Time Zone** changes displayed
+file-list clocks and telemetry clocks while preserving the original recording
+timestamps. Neither preference reparses or changes the recorded GPS/G-force.
+Dragging the separators between video/sidebar, map/file list and video/timeline
+saves their proportions. These choices persist in the user's home YAML file and
+restore at the next launch, including at a different window size.
+
 Map tools support pan, route seeking, measurement, fit and combined position/heading follow. A manual map pan suspends following; Recenter resumes it. Choose an open map provider or configure a user-owned Google Maps API key. Provider labels and attribution remain visible.
 
 ## Cutting and joining
@@ -31,7 +39,7 @@ filesystem/access problems are reported separately.
 
 ## Video renderer
 
-Choose **Settings > Renderer > Auto (Vulkan preferred)** or **Direct3D 11 (D3D11VA)**. Auto is the default and can try D3D11 once if Vulkan output initialization fails. A change restarts only the video process, retaining the current position, pause/play, speed, audio, group, timeline, A-B loop and fullscreen/zoom/flips. Expect a short video interruption. The preference is saved for later sessions.
+On Windows, choose **Settings > Renderer > Auto (Vulkan preferred)** or **Direct3D 11 (D3D11VA)**. Auto is the default and can try D3D11 once if Vulkan output initialization fails. Ubuntu uses the native Linux Auto renderer; D3D11 is unavailable. A change restarts only the video process, retaining the current position, pause/play, speed, audio, group, timeline, A-B loop and fullscreen/zoom/flips. Expect a short video interruption. The preference is saved for later sessions.
 
 Open **Renderer diagnostics** in the same submenu to see the actual GPU context, decoder and mpv version. Vulkan rendering does not imply Vulkan hardware decoding; software decoding or `d3d11va-copy` can be valid. The supplied mpv retains its existing Windows loader/driver requirements: fallback cannot fix a missing DLL required to load the executable. No Vulkan SDK installer is included.
 

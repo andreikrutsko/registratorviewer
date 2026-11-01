@@ -1,6 +1,6 @@
 # RegistratorViewer.Next
 
-A Windows x64 dashcam player with continuous grouped playback, GPS routes, G-sensor charts, online maps, video zoom and screenshots, and lossless cutting and merging.
+A Windows and Ubuntu x64 dashcam player with continuous grouped playback, GPS routes, G-sensor charts, online maps, video zoom and screenshots, and lossless cutting and merging.
 
 The application offers English, German, Polish, Lithuanian and Ukrainian interfaces. Language changes apply immediately.
 
@@ -8,20 +8,22 @@ Indexed 16 KiB GPS MP4 recordings are detected automatically. Native GPS blocks 
 
 ## System requirements
 
-- **Windows x64:** a currently serviced Windows 11 release is recommended
-  (24H2/build **26100** or newer). Windows 10 edition/build compatibility and
-  validation limits are listed in the [detailed requirements](docs/system-requirements.md#windows-versions).
-- **Runtime:** install **Microsoft Edge WebView2 Evergreen Runtime**. The release
-  includes .NET 10 Desktop Runtime and its media tools; no separate .NET SDK,
-  .NET runtime, mpv or FFmpeg installation is needed.
-- **Graphics:** a working Vulkan or Direct3D 11 driver. The bundled player also
+- **Windows x64:** use a serviced Windows 11 edition, with **Microsoft Edge
+  WebView2 Evergreen Runtime**. The Windows package includes .NET 10 and its media
+  tools; a separate SDK, .NET runtime, mpv or FFmpeg installation is unnecessary.
+- **Ubuntu x64:** Ubuntu **24.04 LTS** with a graphical X11/XWayland session is the
+  validated family. Install `mpv`, `ffmpeg`, GTK 3, WebKitGTK 4.1 and libsoup 3 from
+  Ubuntu packages. The Linux executable includes .NET 10; no SDK or PowerShell is
+  required. Wayland-native, other distributions, ARM and macOS are not certified.
+- **Graphics:** Windows uses Vulkan or Direct3D 11; Ubuntu uses the installed
+  mpv renderer and graphics driver. The Windows bundled player also
   requires the **64-bit Vulkan loader** (`vulkan-1.dll`), including in D3D11 mode;
   it is normally supplied with the graphics driver.
 - **Network:** required for online maps and update checks; local playback and
   editing work offline.
 
-See [system requirements](docs/system-requirements.md) for Windows build numbers,
-runtime download links, hardware sizing and troubleshooting.
+See [system requirements](docs/system-requirements.md) for Windows builds, Ubuntu
+installation commands, included/system runtimes, hardware and validation limits.
 
 ## Supported Models
 
@@ -75,11 +77,18 @@ sample-scoped validation does not certify every firmware or recording mode.
 
 ## Downloads
 
-Use the [Releases page](https://github.com/andreikrutsko/registratorviewer/releases). Download `RegistratorViewer.Next.exe` and optionally verify it using `SHA256SUMS.txt`. WebView2 Evergreen is required; the application bundle includes its .NET runtime. This repository's automatic “Source code” archives contain user documentation only.
+Use the [Releases page](https://github.com/andreikrutsko/registratorviewer/releases).
+Paired releases contain **`RegistratorViewer.Next.exe`** for Windows x64 and
+**`RegistratorViewer.Next-linux-x64`** for Ubuntu x64, with one `SHA256SUMS.txt`
+covering both. Each application is a self-contained single executable. On Ubuntu,
+run `chmod u+x RegistratorViewer.Next-linux-x64` before launching it. Ubuntu's
+media/browser system packages are prerequisites, rather than embedded Windows
+tools. Earlier releases may contain only the Windows asset. This repository's
+automatic “Source code” archives contain user documentation only.
 
 Application source is private and is not distributed in this repository. The owner approved the current distribution model and exact dependency inventory on 2026-10-25, including the documented source-material risk exception. Offline full license texts are accessible through **? → Third-party Licenses** and About.
 
-See the [exact media manifest](media-tool-manifest.json), [third-party notices](THIRD_PARTY_NOTICES.md) and [full license texts](THIRD_PARTY_LICENSES/). Binary releases include notices, full licenses, the exact manifest and any explicitly declared source assets. On 2026-10-25 the owner accepted the risk of release without complete corresponding sources and build materials for the exact GPL media binaries; source completeness remains UNKNOWN and no complete source package is claimed. This decision changes project policy, not third-party licenses. These compliance assets are separate from the single EXE required to run the application; automatic GitHub documentation archives do not replace them. The owner approved all distribution review categories; final artifact, public-document and publication checks remain required.
+See the [exact media manifest](media-tool-manifest.json), [desktop runtime catalog](desktop-runtime-manifest.json), [third-party notices](THIRD_PARTY_NOTICES.md) and [full license texts](THIRD_PARTY_LICENSES/). Binary releases include notices, full licenses, the exact manifest and any explicitly declared source assets. On 2026-10-25 the owner accepted the risk of release without complete corresponding sources and build materials for the exact GPL media binaries; source completeness remains UNKNOWN and no complete source package is claimed. This decision changes project policy, not third-party licenses. These compliance assets are separate from the single platform executable required to run the application; automatic GitHub documentation archives do not replace them. The owner approved all distribution review categories; final artifact, public-document and publication checks remain required.
 
 Telegram updates: https://t.me/RegistratorViewer
 

@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 1,
+  "platforms": [
+    "win-x64",
+    "linux-x64"
+  ],
+  "runtime": {
+    "family": ".NET",
+    "version": "10.0.13",
+    "selfContained": true
+  },
+  "scope": "Reviewed dependency catalog; includes build and other-RID support packages. Exact delivered content is validated per target, not every file in every package.",
+  "packages": [
+    {
+      "package": "Avalonia/12.1.4",
+      "license": "MIT",
+      "packageSha256": "90cf963a0e5fed7fc0e5cd9cefe3c159b78de086272c3ddde94c75cb83f9c4ac",
+      "licenseResources": [
+        "Avalonia-Avalonia-upstream-license.txt"
+      ]
+    },
+    {
+      "package": "Avalonia.Angle.Windows.Natives/2.1.27548.20260419",
+      "license": "LICENSE",
+      "packageSha256": "76d67901097e9173d155efc4c2b7d2c8e3122f2c2e0415028eb0c88478a386f9",
+      "licenseResources": [
+        "Avalonia-Avalonia.Angle.Windows.Natives-2.1.27548.20260419-LICENSE.txt"
+      ]
+    },
+    {
+      "package": "Avalonia.BuildServices/11.3.2",
+      "license": "MIT",
+      "packageSha256": "eb0c74ead8d229640e957d9ccdda7a5a1d27bb055aa71e6a7ffb3c423e707b8d",
+      "licenseResources": [
+        "Avalonia-BuildServices-upstream-license.txt"
+      ]
+    },
+    {
+      "package": "Avalonia.Controls.WebView/12.1.1",
+      "license": "MIT",
+      "packageSha256": "ac20826c56724fb0e74b3ea2765ec10e72a498dd22e4de16bc5a86407cca0880",
+      "licenseResources": [
+        "Avalonia-WebView-upstream-license.txt"
+      ]
+    },
+    {
+      "package": "Avalonia.Desktop/12.1.4",
+      "license": "MIT",
+      "packageSha256": "5da57df4f56d32f3894475da869d3555a968085f5d93b73b3f5ae89f70a5cd58",
+      "licenseResources": [
+        "Avalonia-Avalonia-upstream-license.txt"
+      ]
+    },
+    {
+      "package": "Avalonia.FreeDesktop/12.1.4",
+      "license": "MIT",
+      "packageSha256": "e689791338533943a246d3522055edb44229aa19eb7a8233801f0d89fb63da72",
+      "licenseResources": [
+        "Avalonia-Avalonia-upstream-license.txt"
+      ]
+    },
+    {
+      "package": "Avalonia.FreeDesktop.AtSpi/12.1.4",
+      "license": "MIT",
+      "packageSha256": "d8d29680c17ae46e887775e6840f96c37e68016f9edacbbb7b62d453e5685649",
+      "licenseResources": [
+        "Avalonia-Avalonia-upstream-license.txt"
+      ]
+    },
+    {
+      "package": "Avalonia.HarfBuzz/12.1.4",
+      "license": "MIT",
+      "packageSha256": "f52e5c1b6a00886ef46816ed2fc9a2c28844289b1af30bd7ea247e220d20c0cb",
+      "licenseResources": [
+        "Avalonia-Avalonia-upstream-license.txt"
+      ]
+    },
+    {
+      "package": "Avalonia.Native/12.1.4",
+      "license": "MIT",
+      "packageSha256": "418dbf45252748c5295a948436d646ed90d54a5872e8352467d181587bc1b51d",
+      "licenseResources": [
+        "Avalonia-Avalonia-upstream-license.txt"
+      ]
+    },
+    {
+      "package": "Avalonia.Remote.Protocol/12.1.4",
+      "license": "MIT",
+      "packageSha256": "e115f5143ef0fc745cf171bb926ad1083ed4c833ca977a0eb11bdb0c41605f5c",
+      "licenseResources": [
+        "Avalonia-Avalonia-upstream-license.txt"
+      ]
+    },
+    {
+      "package": "Avalonia.Skia/12.1.4",
+      "license": "MIT",
+      "packageSha256": "f42e12d06df92ae116e5baaac5e0319cec090d990a303edc1afd0e7c202a6e69",
+      "licenseResources": [
+        "Avalonia-Avalonia-upstream-license.txt"
+      ]
+    },
+    {
+      "package": "Avalonia.Themes.Fluent/12.1.4",
+      "license": "MIT",
+      "packageSha256": "0b2c317ee4dbc9b12c9cb564d4f99b10872b655a450c91a66ac063d9056a3c38",
+      "licenseResources": [
+        "Avalonia-Avalonia-upstream-license.txt"
+      ]
+    },
+    {
+      "package": "Avalonia.Win32/12.1.4",
+      "license": "MIT",
+      "packageSha256": "743abeae210f287b846a42d292b2d8cc85b345bef8df13a01e481d252090b81b",
+      "licenseResources": [
+        "Avalonia-Avalonia-upstream-license.txt"
+      ]
+    },
+    {
+      "package": "Avalonia.X11/12.1.4",
+      "license": "MIT",
+      "packageSha256": "c10179d2da3d0d7dfa75ba698a80674a3bed9b51a4d3a44ec829832c68e6d696",
+      "licenseResources": [
+        "Avalonia-Avalonia-upstream-license.txt"
+      ]
+    },
+    {
+      "package": "HarfBuzzSharp/8.3.1.3",
+      "license": "MIT",
+      "packageSha256": "ffe644863a4eb3c078b4c3f0def0f2b90a861991c9116bf2dd668a31a0f09ab5",
+      "licenseResources": [
+        "Avalonia-HarfBuzzSharp-8.3.1.3-LICENSE.txt"
+      ]
+    },
+    {
+      "package": "HarfBuzzSharp.NativeAssets.Linux/8.3.1.3",
+      "license": "MIT",
+      "packageSha256": "7de58e9daffc9dcbe6aeaec2c670dccefd5f69c576a68655e51f8ec82b687295",
+      "licenseResources": [
+        "Avalonia-HarfBuzzSharp-8.3.1.3-LICENSE.txt",
+        "Avalonia-HarfBuzzSharp-THIRD-PARTY-NOTICES.txt"
+      ]
+    },
+    {
+      "package": "HarfBuzzSharp.NativeAssets.macOS/8.3.1.3",
+      "license": "MIT",
+      "packageSha256": "e962ac27f8c5f691e7696710bda7b3739015e9f96edd7b0ec50b3b8b8046609b",
+      "licenseResources": [
+        "Avalonia-HarfBuzzSharp-8.3.1.3-LICENSE.txt",
+        "Avalonia-HarfBuzzSharp-THIRD-PARTY-NOTICES.txt"
+      ]
+    },
+    {
+      "package": "HarfBuzzSharp.NativeAssets.WebAssembly/8.3.1.3",
+      "license": "MIT",
+      "packageSha256": "6ab06223cd9f5cf8c0a9fb6a9c6ed6737051cd9ebebca77b6f9f2f412589564d",
+      "licenseResources": [
+        "Avalonia-HarfBuzzSharp-8.3.1.3-LICENSE.txt",
+        "Avalonia-HarfBuzzSharp-THIRD-PARTY-NOTICES.txt"
+      ]
+    },
+    {
+      "package": "HarfBuzzSharp.NativeAssets.Win32/8.3.1.3",
+      "license": "MIT",
+      "packageSha256": "58d51098b595152c01293f71ed47614b3f53d8503bc226efc23b8f7b0ff7c943",
+      "licenseResources": [
+        "Avalonia-HarfBuzzSharp-8.3.1.3-LICENSE.txt",
+        "Avalonia-HarfBuzzSharp-THIRD-PARTY-NOTICES.txt"
+      ]
+    },
+    {
+      "package": "MicroCom.Runtime/0.11.6",
+      "license": "MIT",
+      "packageSha256": "453af6d34477b19bb2c62d17436e68c76a75915b7947509b1ff601b36d7e78d8",
+      "licenseResources": [
+        "Avalonia-MicroCom-upstream-license.txt"
+      ]
+    },
+    {
+      "package": "SkiaSharp/3.119.4",
+      "license": "MIT",
+      "packageSha256": "e32a449d31945c0b9d169eb5bc676e1e3f589aab69888e49d703fdc1c384c176",
+      "licenseResources": [
+        "Avalonia-SkiaSharp-3.119.4-LICENSE.txt"
+      ]
+    },
+    {
+      "package": "SkiaSharp.NativeAssets.Linux/3.119.4",
+      "license": "MIT",
+      "packageSha256": "fae0554059b1107ef7888e46c20bdfb548401ef7a7a6f7391ad4fadc7432d50a",
+      "licenseResources": [
+        "Avalonia-SkiaSharp-3.119.4-LICENSE.txt",
+        "Avalonia-SkiaSharp-THIRD-PARTY-NOTICES.txt"
+      ]
+    },
+    {
+      "package": "SkiaSharp.NativeAssets.macOS/3.119.4",
+      "license": "MIT",
+      "packageSha256": "f7f2f539ce5bba337aa4a8d6eac25caf58cbdd12edf3f32ddcc98294e730cf2c",
+      "licenseResources": [
+        "Avalonia-SkiaSharp-3.119.4-LICENSE.txt",
+        "Avalonia-SkiaSharp-THIRD-PARTY-NOTICES.txt"
+      ]
+    },
+    {
+      "package": "SkiaSharp.NativeAssets.WebAssembly/3.119.4",
+      "license": "MIT",
+      "packageSha256": "c4b7ec581b05169bf9420efd188322fb908ce980df720fffa32c0d941e58dc9d",
+      "licenseResources": [
+        "Avalonia-SkiaSharp-3.119.4-LICENSE.txt",
+        "Avalonia-SkiaSharp-THIRD-PARTY-NOTICES.txt"
+      ]
+    },
+    {
+      "package": "SkiaSharp.NativeAssets.Win32/3.119.4",
+      "license": "MIT",
+      "packageSha256": "5a5698b1b4e1fdc9ffe9868df6874db5fa69f21a4de76ba71a01a542e9b43391",
+      "licenseResources": [
+        "Avalonia-SkiaSharp-3.119.4-LICENSE.txt",
+        "Avalonia-SkiaSharp-THIRD-PARTY-NOTICES.txt"
+      ]
+    },
+    {
+      "package": "Tmds.DBus.Protocol/0.94.1",
+      "license": "MIT",
+      "packageSha256": "4f71d06ac40e725ffbcf1b79853dd93218695a84f23d36fafc85f477a4c9580f",
+      "licenseResources": [
+        "Avalonia-Tmds.DBus-upstream-license.txt"
+      ]
+    },
+    {
+      "package": "Microsoft.Web.WebView2/1.0.4314.35",
+      "license": "Microsoft Software License Terms",
+      "packageSha256": "90778deb1b77e36292828b4b5833c9255c27533f40e0ddd55891ae718944edc4",
+      "licenseResources": [
+        "WebView2.txt"
+      ]
+    },
+    {
+      "package": "Microsoft.NET.ILLink.Tasks/10.0.13",
+      "license": "MIT",
+      "packageSha256": "6e342eacd8c44c89a073ad3fa5e706381d8511d214cb2a9a694572f82dfbdfae",
+      "licenseResources": [
+        "DotNet-10.0.13-LICENSE.txt",
+        "DotNet-10.0.13-THIRD-PARTY-NOTICES.txt"
+      ]
+    },
+    {
+      "package": "Microsoft.NETCore.App.Runtime.win-x64/10.0.13",
+      "license": "MIT and full .NET third-party notices",
+      "packageSha256": "c66885d464697be75676b4d1fbca38b8806f3af01d65d27205b3f06add094444",
+      "licenseResources": [
+        "DotNet-10.0.13-LICENSE.txt",
+        "DotNet-10.0.13-THIRD-PARTY-NOTICES.txt"
+      ]
+    },
+    {
+      "package": "Microsoft.NETCore.App.Runtime.linux-x64/10.0.13",
+      "license": "MIT and full .NET third-party notices",
+      "packageSha256": "28c62a37549d17009f457ac53cd4acdd60f1598ba3f00e22587bbac318c679c6",
+      "licenseResources": [
+        "DotNet-10.0.13-Linux-LICENSE.txt",
+        "DotNet-10.0.13-Linux-THIRD-PARTY-NOTICES.txt"
+      ]
+    }
+  ],
+  "windowsMedia": "Pinned Windows media-tool-manifest.json; original owner decisions retained",
+  "linuxMedia": {
+    "delivery": "User-installed Ubuntu system packages; no Linux media executables are redistributed",
+    "tools": [
+      "mpv",
+      "ffmpeg",
+      "ffprobe"
+    ]
+  },
+  "linuxBrowser": {
+    "delivery": "Replaceable system shared libraries, not a bundled browser runtime",
+    "components": [
+      "GTK 3",
+      "WebKitGTK 4.1",
+      "libsoup 3"
+    ],
+    "license": "LGPL-2.1-or-later and component-specific BSD terms",
+    "fullLicense": "THIRD_PARTY_LICENSES/LGPL-2.1.txt"
+  },
+  "licenseHashes": {
+    "Avalonia-Avalonia-upstream-license.txt": "213814d306090074d234d760239ff0f67eb9b8d20eefb4d5631bb39dbe0b769b",
+    "Avalonia-Avalonia.Angle.Windows.Natives-2.1.27548.20260419-LICENSE.txt": "bf4da21bd20bcfb5b60b7ecc67fa864a79be049e21d6178076887f178dd6c71a",
+    "Avalonia-BuildServices-upstream-license.txt": "94162c40c663bd96ec1b870e6aba6ef0a43f44c9eb500807e7965e7078f6dc47",
+    "Avalonia-HarfBuzzSharp-8.3.1.3-LICENSE.txt": "bc2eb4f37d574f9b1b67da2b17e14d151618850527d78f7323239e7518df5b77",
+    "Avalonia-HarfBuzzSharp-THIRD-PARTY-NOTICES.txt": "98acf9d4d6083959988c884f630cdff760f94bfeb9acf57774653e08c23d1e45",
+    "Avalonia-MicroCom-upstream-license.txt": "6ee769c9ac4dac9abb16b98b1341e9528ff9f4ab685481410d3376d14148f3a9",
+    "Avalonia-SkiaSharp-3.119.4-LICENSE.txt": "bc2eb4f37d574f9b1b67da2b17e14d151618850527d78f7323239e7518df5b77",
+    "Avalonia-SkiaSharp-THIRD-PARTY-NOTICES.txt": "98acf9d4d6083959988c884f630cdff760f94bfeb9acf57774653e08c23d1e45",
+    "Avalonia-Tmds.DBus-upstream-license.txt": "aca3b49277abcc7886ccb2f115603a9f5b15fc3f96019a10c00f2974098b210c",
+    "Avalonia-WebView-upstream-license.txt": "9eb222f4abe1e85e1f84d0b2ccd45d9227817c881e671bff7ffad95807d6001a",
+    "DotNet-10.0.13-LICENSE.txt": "d7a68596ab69b06f51ca278a6545148e4269a9381c26d597c13df5d88e08cf5b",
+    "DotNet-10.0.13-Linux-LICENSE.txt": "cfc21f5e8bd655ae997eec916138b707b1d290b83272c02a95c9f821b8c87310",
+    "DotNet-10.0.13-Linux-THIRD-PARTY-NOTICES.txt": "66f1d4e44973185519bb4aa8a9718eb22fc7af2cc532e3ae9cfc4c127ee7fc54",
+    "DotNet-10.0.13-THIRD-PARTY-NOTICES.txt": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21",
+    "FFmpeg-build.txt": "0342de6bb39dd421cbec2c00d89ad274b640d75ad3f2cab09ffd647ce2d8f949",
+    "GPL-2.0.txt": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6",
+    "GPL-3.0.txt": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "LGPL-2.1.txt": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+    "MapLibre.txt": "ee5fc05a0677eaf69601d2c7db0d9ecd6cc27c3abc1d0733bc9ed34707cf8ef2",
+    "Microsoft-D3DCompiler-audit.txt": "37f3c4852f1470c95cb1e3d8b3fd027db8f64a0f42577af68fae95b927493136",
+    "Microsoft-Windows-SDK-LICENSE.txt": "aba32b705ea9716ba8b6e1cb464016e1709256214022fc132d49bb0572c33406",
+    "WebView2-NOTICE.txt": "106423785c5b7eba0a8e61d1837f2132e9c828e20ad530f565d981c1df60dd90",
+    "WebView2.txt": "0af8f1b807512aae39c2ac1aa4d0cae65cabecb6fd554b8439a5162a0d6eca55",
+    "WindowsDesktop-10.0.13-LICENSE.txt": "a89886665765362eb77e0f8e26602c924520041d1711b2eedc136434fe4d01ab",
+    "mpv-Copyright.txt": "bfe9ee4cceabcb8ecbfadf208d04156f73d801e6a57369a5606bb8341e204a23"
+  }
+}

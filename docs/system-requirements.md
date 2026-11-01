@@ -1,7 +1,10 @@
 # System requirements
 
-These requirements describe the published, self-contained **Windows x64** EXE.
-They do not require a development environment or a separate media player.
+Paired releases provide two self-contained x64 executables under one version:
+`RegistratorViewer.Next.exe` for Windows and `RegistratorViewer.Next-linux-x64`
+for Ubuntu. Each includes .NET 10; no SDK or separate .NET runtime is required.
+Browser, graphics and Linux media prerequisites remain system packages. Earlier
+releases may contain only the Windows executable.
 
 ## Windows versions
 
@@ -20,7 +23,7 @@ updates rather than looking for one exact revision.
 
 The older Windows 10 LTSC versions appearing in Microsoft's component support
 lists are not certified for this complete application package. Windows 7, 8 and
-8.1 are outside the supported scope. There is no 32-bit, native ARM64, Linux or
+8.1 are outside the supported scope. There is no 32-bit, native ARM64 or
 macOS release; Windows ARM64 emulation, Windows Server and headless/remote GPU
 environments have not been certified.
 
@@ -31,11 +34,53 @@ Component compatibility follows the [.NET 10 supported-OS matrix](https://github
 and [WebView2 supported platforms](https://learn.microsoft.com/en-us/microsoft-edge/webview2/#supported-platforms).
 These upstream lists are broader than the application's tested OS coverage.
 
+## Ubuntu versions
+
+The validated Linux family is **Ubuntu 24.04 LTS x86-64**, including local Ubuntu
+24.04.3 under WSL2/WSLg. Use an X11 graphical session or working XWayland: the
+embedded video adapter uses X11. Native Wayland without XWayland, other Ubuntu
+releases/distributions, ARM, musl/Alpine and macOS are not certified application
+targets, even where the upstream [.NET support matrix](https://github.com/dotnet/core/blob/main/release-notes/10.0/supported-os.md)
+lists additional systems. Bare-metal GPU combinations need separate validation.
+
+Install runtime prerequisites from Ubuntu repositories:
+
+```sh
+sudo apt update
+sudo apt install mpv ffmpeg libgtk-3-0t64 libwebkit2gtk-4.1-0 libsoup-3.0-0 \
+  libfontconfig1 libx11-6 libice6 libsm6 libicu74 libssl3t64 zlib1g
+```
+
+The `ffmpeg` package supplies `ffprobe`. The application uses these native ELF
+tools, rather than Windows executables through WSL interoperability. GTK 3,
+WebKitGTK 4.1 and libsoup 3 provide the system browser engine; see the
+[Avalonia browser prerequisites](https://docs.avaloniaui.net/docs/app-development/embedding-web-content).
+These browser and media packages are installed/updated by the operating system,
+not bundled in the Linux executable. A normal Ubuntu desktop includes several
+listed libraries already. No PowerShell or development SDK is needed to run it.
+
+Download the executable and the shared checksum file from the same release:
+
+```sh
+sha256sum --ignore-missing --check SHA256SUMS.txt
+chmod u+x RegistratorViewer.Next-linux-x64
+./RegistratorViewer.Next-linux-x64
+```
+
+Keep recordings with their companion LOG/sidecar files. In WSL, telemetry parsing
+through `/mnt/c` can be substantially slower than native Linux storage because
+of small random reads. The application does not relocate recordings. WSLg needs
+a working display and PulseAudio session; a headless shell alone is insufficient.
+
 ## Runtimes and included components
+
+The following table describes Windows. Ubuntu includes the same desktop UI,
+local map assets, translations, icon and full notices, but obtains its browser,
+graphics/audio libraries and three media tools from system packages as above.
 
 | Component | What to install |
 |---|---|
-| .NET 10 / Windows Desktop Runtime | Nothing separately: the single-file release includes its runtime. Updating an unrelated system .NET installation does not update the bundled runtime; use a newer application release. |
+| .NET 10 runtime | Nothing separately: the single-file release includes its runtime. Updating an unrelated system .NET installation does not update the bundled runtime; use a newer application release. |
 | Microsoft Edge WebView2 Evergreen Runtime | Install or update the [Evergreen Runtime from Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download). The WebView2 Runtime is separate from the Edge browser and is not bundled. Use the x64 installer for offline installation. |
 | mpv, FFmpeg and ffprobe | Included and extracted automatically. No PATH setup, codec pack or separate installation is required for the built-in tools. |
 | Windows graphics and system runtime components | Keep Windows and the GPU manufacturer's drivers updated. Development SDKs and Vulkan SDK are not required. |
@@ -45,9 +90,19 @@ Exact bundled versions are listed in the release's
 If you explicitly select external media tools, those executables must be
 compatible x64 builds and may have additional requirements of their own.
 
+Both platforms use `~/.registratorviewer-next.yml` in the current user's home
+(`%USERPROFILE%` on Windows). Units, timezones and pane proportions are portable
+preferences. Settings need a writable private location; Linux settings-file
+overrides require a filesystem that enforces private Unix permissions. An ordinary
+Windows mount without that enforcement is unsuitable for the settings override.
+Single-file runtime contents extract to the user's cache, so allow free space
+and execution permissions there. System .NET updates do not update the runtime
+inside a downloaded application executable; obtain a newer application release.
+
 ## Graphics, video decoding and maps
 
-Video needs a functioning **Vulkan or Direct3D 11** graphics driver.
+Windows video needs a functioning **Vulkan or Direct3D 11** graphics driver.
+Ubuntu uses the native mpv renderer and graphics driver; D3D11 is unavailable.
 **Settings > Renderer > Auto** prefers Vulkan and can use D3D11 when the player
 starts successfully but Vulkan initialization is unavailable. The explicit
 **Direct3D 11 (D3D11VA)** option selects D3D11 rendering.
@@ -65,7 +120,8 @@ GPU renderer. A 4K HEVC recording may need substantially more CPU capacity than
 1080p AVC. Check **Settings > Renderer > Renderer diagnostics** for the actual
 renderer and decoder. Software decoding does not remove the graphics requirement.
 
-Online vector maps also need WebView2 with usable browser graphics/WebGL support.
+Online vector maps need usable browser graphics/WebGL support: WebView2 on
+Windows, the installed WebKitGTK engine on Ubuntu.
 Remote Desktop, virtual machines and restricted graphics drivers may behave
 differently from a local desktop session.
 
@@ -98,6 +154,13 @@ is optional and requires your own API key and billing configuration. A cached ma
 is not a guaranteed offline map service.
 
 ## If startup or playback fails
+
+On Ubuntu, verify the native packages listed above, use an X11/XWayland graphical
+session, and check the downloaded executable's execute permission and checksum.
+Keep preferences on a filesystem that supports private user-only permissions.
+Install or repair mpv/ffmpeg and browser libraries through the Ubuntu package
+manager; do not copy Windows media tools into the Linux application directory.
+The following driver/renderer steps apply to Windows:
 
 1. Confirm the Windows version/architecture and install WebView2 Evergreen Runtime.
 2. Update the GPU manufacturer's driver. If Windows reports a missing

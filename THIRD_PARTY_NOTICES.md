@@ -45,3 +45,53 @@ The application invokes separate EXEs through CLI and JSON IPC; it does not link
 
 Owner source-material decision, 2026-10-25
 The project owner explicitly accepted the risk of distributing the exact GPL media binaries without complete corresponding sources and build/patch materials, and removed that prerequisite from the project's release policy. Source completeness remains UNKNOWN; no complete corresponding-source archive is claimed or promised by this release. This owner decision does not amend third-party licenses or establish fulfillment of their conditions. Full licenses, notices, the exact manifest and all explicitly declared release assets remain required. The owner also approved the component/integration/distribution reviews; artifact and publication checks remain required. See correspondingSourcePolicy in media-tool-manifest.json for the hash-bound decision reference.
+
+
+Avalonia desktop dependencies (initial adoption 2026-10-30; paired release preparation 2026-11-01)
+Avalonia 12.1.4, NativeWebView 12.1.1, MicroCom.Runtime 0.11.6 and
+Tmds.DBus.Protocol 0.94.1 are MIT licensed. Avalonia.BuildServices 11.3.2 is a
+build-only MIT component. ANGLE native package 2.1.27548.20260419 uses BSD terms.
+SkiaSharp 3.119.4 and HarfBuzzSharp 8.3.1.3 include MIT wrappers and independently
+licensed native material. Full supplier notices are retained, including BSD,
+Apache-2.0, FreeType, PNG, JPEG, ICU and zlib terms and alternative-license texts.
+Portions use the FreeType Project under its FTL alternative, with original
+copyright credits in the complete notice. No change to vendor terms is implied.
+The generic notice's libmicrohttpd entry belongs to an upstream tools-only target,
+disabled in the selected SkiaSharp build graph, rather than a new media linkage.
+
+Eligibility was reviewed before project adoption; exact package/source commits,
+SHA-256/SHA-512 and offline license resources are in
+docs/licensing/avalonia-dependency-review.json. Full license/notice texts are
+embedded and individually discoverable in ? -> Third-party Licenses. The release
+scope and exact-package eligibility are recorded separately from the original
+development-adoption checkpoint. Every Windows/Ubuntu target must pass exact
+bundle, runtime, resource/license and real startup checks before publication.
+The desktop-runtime-manifest.json catalog identifies reviewed packages and their
+license resources; it is not a claim that all files/other-RID assets in a package
+are redistributed. No paid WebView package is adopted.
+
+Linux system prerequisites
+The Ubuntu executable includes its .NET/Avalonia application runtime but does not
+redistribute Linux mpv, ffmpeg/ffprobe or a WebKit browser engine. These come from
+the user's Ubuntu repositories and keep their own package versions, licenses,
+copyright notices and source-package references under /usr/share/doc. They are
+invoked as native external CLI/JSON-IPC processes; libmpv/libavcodec are not linked
+into the managed application. The existing exact GPL binary/source-risk decision
+above concerns the bundled Windows artifacts, not unidentified Linux binaries.
+
+GTK 3 and WebKitGTK 4.1/libsoup 3 are replaceable system shared libraries. GTK and
+relevant WebKit components use LGPL-2.1-or-later; WebKit also contains BSD-licensed
+components. They are not copied into the application bundle or modified here.
+Their applicable replacement, modification and debugging rights are preserved;
+this private application source policy does not remove those rights. Full LGPL
+2.1 text is included in LGPL-2.1.txt and the offline license catalog. Consult the
+installed package copyright files for exact system component/source information.
+Windows instead uses the separately installed WebView2 Evergreen system runtime.
+
+SDK build-only dependency
+Microsoft.NET.ILLink.Tasks 10.0.13 is an MIT-licensed .NET SDK build tool
+restored by the single-file targets. It is not shipped in the runtime bundle;
+trimming and Native AOT remain disabled. Its exact package and MIT/full .NET
+third-party notices are recorded in the desktop review/catalog and offline
+licenses. The package third-party notice bytes match the existing .NET 10.0.13
+notice resource.
