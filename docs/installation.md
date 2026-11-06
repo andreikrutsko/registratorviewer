@@ -27,9 +27,95 @@ chmod u+x RegistratorViewer.Next-linux-x64
 ```
 
 The .NET runtime is included in each platform's executable. Windows includes its
-media tools; Ubuntu uses native `mpv`, `ffmpeg` and `ffprobe` system packages.
+media tools; Ubuntu uses native `mpv`, `ffmpeg` and `ffprobe` executables.
 PowerShell and a development SDK are not needed to run the Ubuntu application.
 Earlier releases may offer only the Windows asset.
+
+### Optional dependency installation on minimal Ubuntu
+
+The commands below target **Ubuntu 24.04 LTS amd64**. Use them if a minimal
+installation lacks the media tools, browser engine or desktop libraries. Skip
+this step when the prerequisites are already installed. Installing them does
+not require installing a separate .NET runtime or SDK.
+
+If `mpv` or `ffmpeg` has no installation candidate, enable Ubuntu's Universe
+repository first:
+
+```sh
+sudo apt-get update
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository -y universe
+sudo apt-get update
+```
+
+Explicitly install the media tools and native UI/browser/runtime dependencies:
+
+```sh
+sudo apt-get update
+sudo apt-get install -y \
+  mpv ffmpeg \
+  libgtk-3-0t64 libwebkit2gtk-4.1-0 libsoup-3.0-0 \
+  libfontconfig1 fonts-dejavu-core \
+  libx11-6 libice6 libsm6 libxrandr2 libxi6 libxcursor1 libxkbcommon-x11-0 \
+  libgl1 libegl1 libvulkan1 libasound2t64 libpulse0 \
+  ca-certificates tzdata libc6 libgcc-s1 libstdc++6 \
+  libgssapi-krb5-2 libicu74 libssl3t64 zlib1g
+```
+
+The Ubuntu **`ffmpeg` package includes `ffprobe`**; there is no separate
+`apt install ffprobe` step. APT also installs each package's required libraries.
+The native system libraries above are still needed by a self-contained .NET
+application. See the [Ubuntu FFmpeg package](https://packages.ubuntu.com/noble/ffmpeg)
+and [Microsoft's Ubuntu dependency list](https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install#dependencies-3).
+
+To force reinstallation of already installed media tools, for example after a
+missing or damaged executable, run:
+
+```sh
+sudo apt-get update
+sudo apt-get install --reinstall mpv ffmpeg
+```
+
+For a damaged GTK/WebKit installation, use the same `--reinstall` option with
+`libgtk-3-0t64 libwebkit2gtk-4.1-0 libsoup-3.0-0`. It reinstalls the named packages
+without changing the application executable.
+
+### A graphical session and graphics drivers
+
+The application needs a running **X11 or XWayland graphical session**. Installing
+libraries alone does not turn a headless Ubuntu Server shell into a desktop.
+On a machine without any desktop, optionally install Ubuntu's minimal desktop,
+then sign in to its graphical session:
+
+```sh
+sudo apt-get install ubuntu-desktop-minimal xwayland
+```
+
+For WSL2, use a working **WSLg** display/audio session instead; installing a full
+Ubuntu desktop inside WSL is unnecessary. On bare metal, install the appropriate
+GPU driver through Ubuntu's Additional Drivers settings. Missing Mesa rendering
+components on an Intel/AMD or software-rendered setup can be installed with:
+
+```sh
+sudo apt-get install libgl1-mesa-dri mesa-vulkan-drivers
+```
+
+### Check the installed tools
+
+Run these checks in the same Ubuntu session used to start the application:
+
+```sh
+command -v mpv ffmpeg ffprobe
+mpv --version
+ffmpeg -version
+ffprobe -version
+```
+
+All three commands must resolve to native Linux tools on `PATH`. Restart the
+application after installing or repairing dependencies. For display, audio and
+graphics limitations, see [system requirements](system-requirements.md#ubuntu-versions).
+
+### Preferences and online maps
 
 Preferences are stored in `~/.registratorviewer-next.yml` in the current user's
 home on both platforms. Online maps require a network connection. Google Maps

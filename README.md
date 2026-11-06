@@ -1,10 +1,8 @@
 # RegistratorViewer.Next
 
-A Windows and Ubuntu x64 dashcam player with continuous grouped playback, GPS routes, G-sensor charts, online maps, video zoom and screenshots, and lossless cutting and merging.
+Cross platform Windows and Ubuntu x64 dashcam player with continuous grouped playback, GPS routes, G-sensor charts, online maps, video zoom and screenshots, and lossless cutting and merging.
 
 The application offers English, German, Polish, Lithuanian and Ukrainian interfaces. Language changes apply immediately.
-
-Indexed 16 KiB GPS MP4 recordings are detected automatically. Native GPS blocks and recovery indexes are retained through stream-copy cutting and joining; invalid fixes remain gaps, recorded speed/course are preserved, and unavailable G-force is not fabricated. Cuts align to complete GOP boundaries.
 
 ## System requirements
 
@@ -27,17 +25,20 @@ installation commands, included/system runtimes, hardware and validation limits.
 
 ## Supported Models
 
-Full support for the data channels present in the tested MOV/MP4 recording variants:
+Support covers the data channels present in the tested MOV/MP4 recording variants;
+it does not certify every firmware, recording mode or optional sidecar:
 
-- **70mai:** A810-2, T800 4K.
-- **BlackVue:** ELITE 9.
+- **70mai:** 4K Omni (X800), A510, A810-2, A810S, A900, A900 Ultra, M300, M310 Plus, Rearview Dash Cam Wide (MIDRIVE D07), T800 4K.
+- **BlackVue:** ELITE 9, ELITE 10.
 - **CARCAM:** R2s.
+- **DDPAI:** mini, Mini5, Mola N3, N5 Dual.
 - **Garmin:** Dash Cam 57.
 - **Lexand:** LR300.
 - **Mini:** 0806.
 - **Mio:** MiVue 812, MiVue C530, MiVue C530 Pro, MiVue i95, MiVue J60, MiVue ViVa V51.
 - **Navitel:** MR155 NV, MR450 GPS, R250 Dual, RS2 Duo.
 - **Neoline:** WIDE S21.
+- **Nexar:** Model unidentified (tested 1080p source recording).
 - **Rexing:** Model unidentified (tested source recording).
 - **ROAV:** Model unidentified (tested trimmed recording).
 - **Street Guardian:** SGGCX2Pro+.
@@ -49,25 +50,8 @@ Full support for the data channels present in the tested MOV/MP4 recording varia
 - **VIOFO:** A119 Mini, A119 V3, A119M Pro, A119S, A129 Plus Duo, A129 Pro, A139, A229, A329, A329S.
 - **Vueroid:** S1-4K Infinite.
 - **WonVon:** W4K.
+- **Xiaomi:** MiJia Car DVR 1S Camera.
 - **Yi:** Dash Cam.
-
-Vueroid and WonVon acceleration is explicitly estimated (`~g`), with the
-original raw data retained; it is not manufacturer-calibrated G-force. The Yi
-entry covers the acquired processed video/audio sample, without a recorded
-GPS/G-force channel or certification of an unidentified hardware variant.
-
-Rexing, ROAV and the additional model-unidentified Vantrue entry cover only
-the acquired video/audio recordings; their investigated carriers contain no
-identified digital GPS/G-force. TeslaCam covers four camera views from each
-of two recording generations: the 2026 sources include recorded GPS and linear
-acceleration, while those channels were not found in the 2021 sources. These
-source-scoped results do not certify unidentified hardware models or every
-firmware. Mini 0806 is the original supported MOV/LOG baseline with GPS and
-recorded XYZ acceleration; additional Mini Series catalog links have not yielded
-new samples and do not extend support to other models or firmware.
-The listed sample variants have passed focused acceptance, final regression and
-local release packaging checks. Published binaries are available from Releases;
-sample-scoped validation does not certify every firmware or recording mode.
 
 ### Partial support
 
