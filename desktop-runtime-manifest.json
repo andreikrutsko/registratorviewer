@@ -2,7 +2,9 @@
   "schemaVersion": 1,
   "platforms": [
     "win-x64",
-    "linux-x64"
+    "linux-x64",
+    "osx-arm64",
+    "osx-x64"
   ],
   "runtime": {
     "family": ".NET",
@@ -33,14 +35,6 @@
       "packageSha256": "eb0c74ead8d229640e957d9ccdda7a5a1d27bb055aa71e6a7ffb3c423e707b8d",
       "licenseResources": [
         "Avalonia-BuildServices-upstream-license.txt"
-      ]
-    },
-    {
-      "package": "Avalonia.Controls.WebView/12.1.1",
-      "license": "MIT",
-      "packageSha256": "ac20826c56724fb0e74b3ea2765ec10e72a498dd22e4de16bc5a86407cca0880",
-      "licenseResources": [
-        "Avalonia-WebView-upstream-license.txt"
       ]
     },
     {
@@ -228,6 +222,14 @@
       ]
     },
     {
+      "package": "Avalonia.Controls.WebView/12.1.2",
+      "license": "MIT",
+      "packageSha256": "4a6f722decc41a68174239e08f97583dbeaadd1413c517be74853ac3ddb86fce",
+      "licenseResources": [
+        "Avalonia-WebView-upstream-license.txt"
+      ]
+    },
+    {
       "package": "Microsoft.Web.WebView2/1.0.4314.35",
       "license": "Microsoft Software License Terms",
       "packageSha256": "90778deb1b77e36292828b4b5833c9255c27533f40e0ddd55891ae718944edc4",
@@ -261,6 +263,24 @@
         "DotNet-10.0.13-Linux-LICENSE.txt",
         "DotNet-10.0.13-Linux-THIRD-PARTY-NOTICES.txt"
       ]
+    },
+    {
+      "package": "Microsoft.NETCore.App.Runtime.osx-arm64/10.0.13",
+      "license": "MIT and full .NET third-party notices",
+      "packageSha256": "2e6506bbb71bf51059b53b93571e65640990c4d3fd67dd4b11dd158ddb6898c0",
+      "licenseResources": [
+        "DotNet-10.0.13-osx-arm64-LICENSE.txt",
+        "DotNet-10.0.13-osx-arm64-THIRD-PARTY-NOTICES.txt"
+      ]
+    },
+    {
+      "package": "Microsoft.NETCore.App.Runtime.osx-x64/10.0.13",
+      "license": "MIT and full .NET third-party notices",
+      "packageSha256": "6d95ae6f0d7060ae9fa3601bdefabe10b68845c03a316966bb241b536788b1b0",
+      "licenseResources": [
+        "DotNet-10.0.13-osx-x64-LICENSE.txt",
+        "DotNet-10.0.13-osx-x64-THIRD-PARTY-NOTICES.txt"
+      ]
     }
   ],
   "windowsMedia": "Pinned Windows media-tool-manifest.json; original owner decisions retained",
@@ -282,6 +302,124 @@
     "license": "LGPL-2.1-or-later and component-specific BSD terms",
     "fullLicense": "THIRD_PARTY_LICENSES/LGPL-2.1.txt"
   },
+  "macMedia": {
+    "delivery": "Separate replaceable shared frameworks and FFmpeg CLI tools",
+    "libraries": [
+      {
+        "name": "dav1d",
+        "version": "1.2.1",
+        "license": "BSD-2-Clause and patent grant",
+        "sourceUrl": "https://code.videolan.org/videolan/dav1d/-/archive/1.2.1/dav1d-1.2.1.tar.bz2",
+        "sourceSha256": "a4003623cdc0109dec3aac8435520aa3fb12c4d69454fa227f2658cdb6dab5fa",
+        "licenseResources": [
+          "MacPlayback-dav1d-1.2.1.txt"
+        ]
+      },
+      {
+        "name": "ffmpeg",
+        "version": "6.0",
+        "license": "LGPL-3.0-or-later",
+        "sourceUrl": "https://ffmpeg.org/releases/ffmpeg-6.0.tar.xz",
+        "sourceSha256": "57be87c22d9b49c112b6d24bc67d42508660e6b718b3db89c44e47e289137082",
+        "licenseResources": [
+          "MacPlayback-ffmpeg-6.0.txt"
+        ]
+      },
+      {
+        "name": "freetype",
+        "version": "2.13.2",
+        "license": "FTL",
+        "sourceUrl": "https://downloads.sourceforge.net/project/freetype/freetype2/2.13.2/freetype-2.13.2.tar.xz",
+        "sourceSha256": "12991c4e55c506dd7f9b765933e62fd2be2e06d421505d7950a132e4f1bb484d",
+        "licenseResources": [
+          "MacPlayback-freetype-2.13.2.txt"
+        ]
+      },
+      {
+        "name": "fribidi",
+        "version": "1.0.13",
+        "license": "LGPL-2.1-or-later",
+        "sourceUrl": "https://github.com/fribidi/fribidi/releases/download/v1.0.13/fribidi-1.0.13.tar.xz",
+        "sourceSha256": "7fa16c80c81bd622f7b198d31356da139cc318a63fc7761217af4130903f54a2",
+        "licenseResources": [
+          "MacPlayback-fribidi-1.0.13.txt"
+        ]
+      },
+      {
+        "name": "harfbuzz",
+        "version": "8.1.1",
+        "license": "MIT",
+        "sourceUrl": "https://github.com/harfbuzz/harfbuzz/archive/8.1.1.tar.gz",
+        "sourceSha256": "b16e6bc0fc7e6a218583f40c7d201771f2e3072f85ef6e9217b36c1dc6b2aa25",
+        "licenseResources": [
+          "MacPlayback-harfbuzz-8.1.1.txt"
+        ]
+      },
+      {
+        "name": "libass",
+        "version": "0.17.1",
+        "license": "ISC",
+        "sourceUrl": "https://github.com/libass/libass/releases/download/0.17.1/libass-0.17.1.tar.xz",
+        "sourceSha256": "f0da0bbfba476c16ae3e1cfd862256d30915911f7abaa1b16ce62ee653192784",
+        "licenseResources": [
+          "MacPlayback-libass-0.17.1.txt"
+        ]
+      },
+      {
+        "name": "libpng",
+        "version": "1.6.40",
+        "license": "Libpng-2.0",
+        "sourceUrl": "https://github.com/pnggroup/libpng/archive/v1.6.40.tar.gz",
+        "sourceSha256": "62d25af25e636454b005c93cae51ddcd5383c40fa14aa3dae8f6576feb5692c2",
+        "licenseResources": [
+          "MacPlayback-libpng-1.6.40.txt"
+        ]
+      },
+      {
+        "name": "libxml2",
+        "version": "2.11.5",
+        "license": "MIT",
+        "sourceUrl": "https://download.gnome.org/sources/libxml2/2.11/libxml2-2.11.5.tar.xz",
+        "sourceSha256": "3727b078c360ec69fa869de14bd6f75d7ee8d36987b071e6928d4720a28df3a6",
+        "licenseResources": [
+          "MacPlayback-libxml2-2.11.5.txt"
+        ]
+      },
+      {
+        "name": "mbedtls",
+        "version": "3.4.1",
+        "license": "Apache-2.0",
+        "sourceUrl": "https://github.com/Mbed-TLS/mbedtls/archive/refs/tags/v3.4.1.tar.gz",
+        "sourceSha256": "a420fcf7103e54e775c383e3751729b8fb2dcd087f6165befd13f28315f754f5",
+        "licenseResources": [
+          "MacPlayback-mbedtls-3.4.1.txt"
+        ]
+      },
+      {
+        "name": "mpv",
+        "version": "0.36.0",
+        "license": "LGPL-2.1-or-later (LGPL-3.0-or-later route for this combination)",
+        "sourceUrl": "https://github.com/mpv-player/mpv/archive/refs/tags/v0.36.0.tar.gz",
+        "sourceSha256": "29abc44f8ebee013bb2f9fe14d80b30db19b534c679056e4851ceadf5a5e8bf6",
+        "licenseResources": [
+          "MacPlayback-mpv-0.36.0.txt"
+        ]
+      },
+      {
+        "name": "uchardet",
+        "version": "0.0.8",
+        "license": "MPL-1.1 / GPL-2.0-or-later / LGPL-2.1-or-later; LGPL route selected",
+        "sourceUrl": "https://www.freedesktop.org/software/uchardet/releases/uchardet-0.0.8.tar.xz",
+        "sourceSha256": "e97a60cfc00a1c147a674b097bb1422abd9fa78a2d9ce3f3fdcc2e78a34ac5f0",
+        "licenseResources": [
+          "MacPlayback-uchardet-0.0.8.txt"
+        ]
+      }
+    ],
+    "toolsVersion": "6.0",
+    "toolsLicense": "LGPL-3.0-or-later",
+    "sourceAsset": "RegistratorViewer.Next-macos-third-party-sources.zip"
+  },
   "licenseHashes": {
     "Avalonia-Avalonia-upstream-license.txt": "213814d306090074d234d760239ff0f67eb9b8d20eefb4d5631bb39dbe0b769b",
     "Avalonia-Avalonia.Angle.Windows.Natives-2.1.27548.20260419-LICENSE.txt": "bf4da21bd20bcfb5b60b7ecc67fa864a79be049e21d6178076887f178dd6c71a",
@@ -297,10 +435,25 @@
     "DotNet-10.0.13-Linux-LICENSE.txt": "cfc21f5e8bd655ae997eec916138b707b1d290b83272c02a95c9f821b8c87310",
     "DotNet-10.0.13-Linux-THIRD-PARTY-NOTICES.txt": "66f1d4e44973185519bb4aa8a9718eb22fc7af2cc532e3ae9cfc4c127ee7fc54",
     "DotNet-10.0.13-THIRD-PARTY-NOTICES.txt": "6d15e10a101c6bfff2ab4429ed061bf76c456fc4b23ad6b03e0d0f8377148a21",
+    "DotNet-10.0.13-osx-arm64-LICENSE.txt": "cfc21f5e8bd655ae997eec916138b707b1d290b83272c02a95c9f821b8c87310",
+    "DotNet-10.0.13-osx-arm64-THIRD-PARTY-NOTICES.txt": "66f1d4e44973185519bb4aa8a9718eb22fc7af2cc532e3ae9cfc4c127ee7fc54",
+    "DotNet-10.0.13-osx-x64-LICENSE.txt": "cfc21f5e8bd655ae997eec916138b707b1d290b83272c02a95c9f821b8c87310",
+    "DotNet-10.0.13-osx-x64-THIRD-PARTY-NOTICES.txt": "66f1d4e44973185519bb4aa8a9718eb22fc7af2cc532e3ae9cfc4c127ee7fc54",
     "FFmpeg-build.txt": "0342de6bb39dd421cbec2c00d89ad274b640d75ad3f2cab09ffd647ce2d8f949",
     "GPL-2.0.txt": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6",
     "GPL-3.0.txt": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
     "LGPL-2.1.txt": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+    "MacPlayback-dav1d-1.2.1.txt": "02adbe0d603ebcd9cc3aa2d3afc9366a1624d58bbef4bcd1a7a0b53da2d2e412",
+    "MacPlayback-ffmpeg-6.0.txt": "497532eec97e7a6d51165a5b6b5251cbf426ad6e16738d307eec60a513d4a1e7",
+    "MacPlayback-freetype-2.13.2.txt": "840b6668fa4fc2c9cdeac076b6cf42945b170779eaff31989b5bf3ba532b23c5",
+    "MacPlayback-fribidi-1.0.13.txt": "d28a43bca6e23c12c17d358bd3bd66a91c6665634d3b3818830ab8537c9d5f87",
+    "MacPlayback-harfbuzz-8.1.1.txt": "eb2eef894885addfa4ac35b996e902f2d16f66555ea29a61bc0b4f9207ef5ef0",
+    "MacPlayback-libass-0.17.1.txt": "9d6969e143176744c715caac692489edf1e3934b70a7620efbe94b20c195ec94",
+    "MacPlayback-libpng-1.6.40.txt": "4cc50870b953c79a31d5b3189938fff906677d55f57e192128288d9663fa758f",
+    "MacPlayback-libxml2-2.11.5.txt": "a0df67f4a6e1c7bd01c68d326c477e64e5b21ac05e65943c02c894b6ce539f61",
+    "MacPlayback-mbedtls-3.4.1.txt": "17ec09b4b506f7f7f61eee87fa754a1a2f8012ba28b25c33ff6909ec316244be",
+    "MacPlayback-mpv-0.36.0.txt": "4fbbfa041ec4e779b2bb8e79ee8dce46f2585f6280678120f39bb6dff68d2d62",
+    "MacPlayback-uchardet-0.0.8.txt": "b30b44afd9c7db9b34f975aa2ea6e91657908b0bcd2b22185e0de84c5f661cd2",
     "MapLibre.txt": "ee5fc05a0677eaf69601d2c7db0d9ecd6cc27c3abc1d0733bc9ed34707cf8ef2",
     "Microsoft-D3DCompiler-audit.txt": "37f3c4852f1470c95cb1e3d8b3fd027db8f64a0f42577af68fae95b927493136",
     "Microsoft-Windows-SDK-LICENSE.txt": "aba32b705ea9716ba8b6e1cb464016e1709256214022fc132d49bb0572c33406",

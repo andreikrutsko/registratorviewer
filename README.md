@@ -1,32 +1,39 @@
 # RegistratorViewer.Next
 
-Cross platform Windows and Ubuntu x64 dashcam player with continuous grouped playback, GPS routes, G-sensor charts, online maps, video zoom and screenshots, and lossless cutting and merging.
+Cross-platform dashcam player for Windows x64, Ubuntu x64 and macOS on Apple Silicon or Intel, with continuous grouped playback, GPS routes, G-sensor charts, online maps, video zoom and screenshots, and lossless cutting and merging.
 
 The application offers English, German, Polish, Lithuanian and Ukrainian interfaces. Language changes apply immediately.
 
 ## System requirements
 
-- **Windows x64:** use a serviced Windows 11 edition, with **Microsoft Edge
-  WebView2 Evergreen Runtime**. The Windows package includes .NET 10 and its media
-  tools; a separate SDK, .NET runtime, mpv or FFmpeg installation is unnecessary.
-- **Ubuntu x64:** Ubuntu **24.04 LTS** with a graphical X11/XWayland session is the
-  validated family. Install `mpv`, `ffmpeg`, GTK 3, WebKitGTK 4.1 and libsoup 3 from
-  Ubuntu packages. The Linux executable includes .NET 10; no SDK or PowerShell is
-  required. Wayland-native, other distributions, ARM and macOS are not certified.
-- **Graphics:** Windows uses Vulkan or Direct3D 11; Ubuntu uses the installed
-  mpv renderer and graphics driver. The Windows bundled player also
-  requires the **64-bit Vulkan loader** (`vulkan-1.dll`), including in D3D11 mode;
-  it is normally supplied with the graphics driver.
-- **Network:** required for online maps and update checks; local playback and
+- **Windows x64:** Windows 11 with **Microsoft Edge WebView2 Evergreen Runtime**.
+  The required .NET runtime and media tools are included.
+- **Ubuntu x64:** Ubuntu **24.04 LTS** with X11 or XWayland. Install `mpv`,
+  `ffmpeg`, GTK 3, WebKitGTK 4.1 and libsoup 3 from Ubuntu packages.
+  A separate .NET installation is unnecessary.
+- **macOS:** **26.0 or later**, on Apple Silicon (`arm64`) or Intel (`x86_64`).
+  Download the ZIP for your processor. Runtime and media components are included;
+  Homebrew and a separate .NET installation are unnecessary.
+- **Graphics:** keep your graphics drivers up to date. Windows requires the
+  64-bit Vulkan loader (`vulkan-1.dll`), normally supplied with the graphics driver.
+- **Network:** required for online maps and update checks. Local playback and
   editing work offline.
 
-See [system requirements](docs/system-requirements.md) for Windows builds, Ubuntu
-installation commands, included/system runtimes, hardware and validation limits.
+See [system requirements](docs/system-requirements.md) for hardware and OS
+dependencies, and [installation](docs/installation.md) for setup instructions.
+
+## Supported formats
+
+GPS track import supports GPX, TCX, FIT, NMEA, timed KML/KMZ, GeoJSON,
+CSV/TSV, OziExplorer PLT and General LOG files. The application identifies
+formats by their contents rather than the filename extension. Tracks need
+timestamps for synchronization with video. See the [GPS track guide](docs/user-guide.md#gps-tracks-and-corrections)
+for attachment, source selection and conversion.
 
 ## Supported Models
 
-Support covers the data channels present in the tested MOV/MP4 recording variants;
-it does not certify every firmware, recording mode or optional sidecar:
+Support for MOV/MP4 recordings depends on the camera firmware, recording mode
+and available GPS or sensor data:
 
 - **70mai:** 4K Omni (X800), A510, A810-2, A810S, A900, A900 Ultra, M300, M310 Plus, Rearview Dash Cam Wide (MIDRIVE D07), T800 4K.
 - **BlackVue:** ELITE 9, ELITE 10.
@@ -61,18 +68,33 @@ it does not certify every firmware, recording mode or optional sidecar:
 
 ## Downloads
 
-Use the [Releases page](https://github.com/andreikrutsko/registratorviewer/releases).
-Paired releases contain **`RegistratorViewer.Next.exe`** for Windows x64 and
-**`RegistratorViewer.Next-linux-x64`** for Ubuntu x64, with one `SHA256SUMS.txt`
-covering both. Each application is a self-contained single executable. On Ubuntu,
-run `chmod u+x RegistratorViewer.Next-linux-x64` before launching it. Ubuntu's
-media/browser system packages are prerequisites, rather than embedded Windows
-tools. Earlier releases may contain only the Windows asset. This repository's
-automatic “Source code” archives contain user documentation only.
+Download available packages from the
+[Releases page](https://github.com/andreikrutsko/registratorviewer/releases).
+Check the **Assets** list for the packages available in each release.
 
-Application source is private and is not distributed in this repository. The owner approved the current distribution model and exact dependency inventory on 2026-10-25, including the documented source-material risk exception. Offline full license texts are accessible through **? → Third-party Licenses** and About.
+| Platform | Package |
+|---|---|
+| Windows x64 | `RegistratorViewer.Next.exe` |
+| Ubuntu x64 | `RegistratorViewer.Next-linux-x64` |
+| macOS Apple Silicon | `RegistratorViewer.Next-macos-arm64.zip` |
+| macOS Intel | `RegistratorViewer.Next-macos-x64.zip` |
 
-See the [exact media manifest](media-tool-manifest.json), [desktop runtime catalog](desktop-runtime-manifest.json), [third-party notices](THIRD_PARTY_NOTICES.md) and [full license texts](THIRD_PARTY_LICENSES/). Binary releases include notices, full licenses, the exact manifest and any explicitly declared source assets. On 2026-10-25 the owner accepted the risk of release without complete corresponding sources and build materials for the exact GPL media binaries; source completeness remains UNKNOWN and no complete source package is claimed. This decision changes project policy, not third-party licenses. These compliance assets are separate from the single platform executable required to run the application; automatic GitHub documentation archives do not replace them. The owner approved all distribution review categories; final artifact, public-document and publication checks remain required.
+On Windows, launch the EXE. On Ubuntu, run
+`chmod u+x RegistratorViewer.Next-linux-x64` before launching the application.
+On macOS, extract the ZIP and keep the complete `RegistratorViewer.Next.app`.
+See [installation](docs/installation.md) for detailed instructions.
+
+Use `SHA256SUMS.txt` to verify your download. GitHub's automatic **Source code**
+archives contain this repository's documentation; install the application using
+the packages listed above.
+
+## Licenses
+
+See the [application license](LICENSE.txt), [third-party notices](THIRD_PARTY_NOTICES.md)
+and [full third-party license texts](THIRD_PARTY_LICENSES/). License texts are also
+available offline through **? → Third-party Licenses** and About. Third-party
+source archives, when supplied, are listed among the release assets; see
+[source-material instructions](docs/installation.md#third-party-source-materials).
 
 Telegram updates: https://t.me/RegistratorViewer
 

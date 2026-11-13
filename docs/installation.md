@@ -115,8 +115,33 @@ All three commands must resolve to native Linux tools on `PATH`. Restart the
 application after installing or repairing dependencies. For display, audio and
 graphics limitations, see [system requirements](system-requirements.md#ubuntu-versions).
 
-### Preferences and online maps
+## macOS Apple Silicon and Intel
+
+Mac packages currently come from local/private CI builds; public availability is
+listed in [Downloads](../README.md#downloads). Use macOS **26.0 or later** and select
+`RegistratorViewer.Next-macos-arm64.zip` for Apple Silicon or
+`RegistratorViewer.Next-macos-x64.zip` for Intel. These are separate builds.
+Verify the ZIP's SHA-256 against the supplied checksum, extract it and keep the
+complete `RegistratorViewer.Next.app`, including its frameworks and media tools.
+No separate .NET, Homebrew, mpv or FFmpeg installation is required.
+
+Current packages use ad-hoc technical signing. Developer ID/notarization and
+downloaded-app clean-user acceptance remain pending; local startup success does
+not establish Gatekeeper acceptance for a downloaded archive.
+
+### Third-party source materials
+
+The shared `RegistratorViewer.Next-macos-third-party-sources.zip` accompanies Mac
+distributions for both architectures. Check its outer ZIP checksum, extract it,
+then run `shasum -a 256 -c SHA256SUMS.txt` inside its source directory. Start with
+its `README.md`, `BUILD-PLAYBACK.md`, `BUILD-EXPORT.md` and
+`REPLACE-LIBRARIES.md`. `BUILD-PLAYBACK-HOMEBREW.md` provides a Homebrew-tool
+alternative for rebuilding compatible libmpv. `SOURCE-MANIFEST.json` maps the source versions and build
+paths to the exact Mac application ZIPs and signed media binaries. Source
+packaging alone does not establish a successful native rebuild or replacement.
+
+## Preferences and online maps
 
 Preferences are stored in `~/.registratorviewer-next.yml` in the current user's
-home on both platforms. Online maps require a network connection. Google Maps
+home on every platform. Online maps require a network connection. Google Maps
 is optional and requires the user's own API key and billing; keys are not included.

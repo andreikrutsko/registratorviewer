@@ -1,4 +1,4 @@
-RegistratorViewer.Next — third-party software notices
+RegistratorViewer.Next â€” third-party software notices
 
 Application source is maintained privately. This document does not grant an open-source license to the application's own code. The owner approved the current application distribution model on 2026-10-25.
 
@@ -16,7 +16,7 @@ Corresponding FFmpeg revision: https://github.com/FFmpeg/FFmpeg/commit/946fcce07
 Source and library licenses: https://ffmpeg.org/legal.html
 The original distributor's build README and GPL-3.0 license text are embedded. GPL obligations for these components remain independent of the application's private source. A general upstream URL alone must not be treated as proof that all corresponding-source distribution obligations have been met.
 
-d3dcompiler_47.dll — Microsoft proprietary component (shipped as d3dcompiler_43.dll)
+d3dcompiler_47.dll â€” Microsoft proprietary component (shipped as d3dcompiler_43.dll)
 Unmodified signed bytes distributed with the pinned mpv Windows package, SHA-256 4b074a3976399dc735484f5d43d04b519b7bdee8ac719d9ab8ed6bd4e6be0345. Normal-profile Windows inspection confirms Microsoft Corporation copyright, valid Microsoft Authenticode and version 10.0.18362.1. Its original/internal name is d3dcompiler_47.dll; the bytes exactly match Microsoft.Windows.SDK.CPP 10.0.18362.5, c/Redist/D3D/x64/d3dcompiler_47.dll. The distributor renamed the file without changing its bytes. The Windows SDK license and referenced redistribution list identify this unmodified compiler object code for Classic Windows apps, subject to their conditions. Full SDK terms are embedded. The owner approved this renamed/self-extracting delivery and the identified SDK conditions on 2026-10-25; no metadata waiver is required or applied. The earlier metadata-absence observation and the unrelated DXSDK compiler_43 comparison do not describe its actual origin. This is proprietary Microsoft software, not GPL/LGPL.
 https://www.nuget.org/packages/Microsoft.Windows.SDK.CPP/10.0.18362.5
 https://aka.ms/WinSDKLicenseURL
@@ -48,7 +48,8 @@ The project owner explicitly accepted the risk of distributing the exact GPL med
 
 
 Avalonia desktop dependencies (initial adoption 2026-10-30; paired release preparation 2026-11-01)
-Avalonia 12.1.4, NativeWebView 12.1.1, MicroCom.Runtime 0.11.6 and
+Avalonia 12.1.4, NativeWebView 12.1.2,
+MicroCom.Runtime 0.11.6 and
 Tmds.DBus.Protocol 0.94.1 are MIT licensed. Avalonia.BuildServices 11.3.2 is a
 build-only MIT component. ANGLE native package 2.1.27548.20260419 uses BSD terms.
 SkiaSharp 3.119.4 and HarfBuzzSharp 8.3.1.3 include MIT wrappers and independently
@@ -95,3 +96,60 @@ trimming and Native AOT remain disabled. Its exact package and MIT/full .NET
 third-party notices are recorded in the desktop review/catalog and offline
 licenses. The package third-party notice bytes match the existing .NET 10.0.13
 notice resource.
+# macOS media components
+
+macOS playback uses media-kit/libmpv-darwin-build v0.7.3, video-full variant,
+from source commit aadae8ce295dd15a222839c361c4c984ce9befb2. Shared frameworks
+remain separate and replaceable through libmpv's public C ABI/OpenGL render API.
+
+The libraries are mpv 0.36.0 (LGPL-2.1-or-later, with the LGPLv3 shared-library
+route for this combination), FFmpeg 6.0 (LGPL-3.0-or-later configuration),
+libass 0.17.1 (ISC), FreeType 2.13.2 (FTL), FriBidi 1.0.13 (LGPL-2.1-or-later),
+HarfBuzz 8.1.1 (MIT), libpng 1.6.40 (Libpng-2.0), Mbed TLS 3.4.1 (Apache-2.0),
+dav1d 1.2.1 (BSD-2-Clause and patent grant), libxml2 2.11.5 (MIT), and uchardet
+0.0.8 (LGPL option of its MPL/GPL/LGPL terms). GPL/nonfree FFmpeg components are
+disabled. macOS system frameworks are operating-system components.
+
+This software is based in part on the work of the FreeType Team and the
+Independent JPEG Group. Full source-package license/copyright texts are included
+in MacPlayback license resources and offline component entries under Help /
+Third-party Licenses. Library modification, replacement and reverse engineering
+for debugging those modifications are permitted under the applicable terms.
+No application-wide GPL license is selected.
+
+The Mac downloads include RegistratorViewer.Next-macos-third-party-sources.zip
+and macos-source-materials.json, shared by both architectures. They contain the
+matching eleven library source archives, supplier patches/build definitions,
+the pinned libpng Meson overlay, full licenses and build/install instructions.
+The source manifest identifies each package and supplier/final signed media
+binary hash. These Mac sources are required independently of the earlier Windows
+GPL source-material risk decision.
+
+For compatible modified playback frameworks, set RV_MACOS_PLAYBACK_DIRECTORY to
+an absolute directory containing the named frameworks and restart. Original
+built-in binary hashes are not enforced for this explicit replacement. No
+publisher signing identity is required for ad-hoc signing of replacement code.
+The source archive includes supplier and Homebrew-tool build instructions and
+library replacement directions. Build tools are not application dependencies.
+
+## macOS export tools
+
+Separate universal arm64/x86_64 ffmpeg and ffprobe 6.0 executables use unmodified
+upstream source. Their configuration selects LGPL-3.0-or-later and disables
+GPL/nonfree components, external autodetection and networking. Their dynamic
+dependencies are macOS system frameworks. Static FFmpeg libraries are linked
+only into these standalone tools; the private application uses command arguments,
+files and JSON. Video conversion uses system VideoToolbox; stream copying remains
+the default and conversion requires the user's existing explicit choice.
+
+Full FFmpeg source-package notices and LGPL/GPL alternative texts are included
+in MacPlayback-ffmpeg-6.0 and the selectable offline export-tool entry. The chosen
+license is LGPLv3. The matching source archive contains the source, exact configure
+options and a standalone build recipe for both architecture slices.
+
+## macOS runtime and web view
+
+The Mac application includes .NET 10.0.13 with full official runtime license and
+third-party notices for osx-arm64 and osx-x64. NativeWebView 12.1.2 retains its
+MIT license and complete attribution. See desktop-runtime-manifest.json and
+the full offline license catalog for exact identities and texts.

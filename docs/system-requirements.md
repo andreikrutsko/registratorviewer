@@ -23,8 +23,8 @@ updates rather than looking for one exact revision.
 
 The older Windows 10 LTSC versions appearing in Microsoft's component support
 lists are not certified for this complete application package. Windows 7, 8 and
-8.1 are outside the supported scope. There is no 32-bit, native ARM64 or
-macOS release; Windows ARM64 emulation, Windows Server and headless/remote GPU
+8.1 are outside the supported scope. There is no Windows 32-bit or native ARM64
+release; Windows ARM64 emulation, Windows Server and headless/remote GPU
 environments have not been certified.
 
 Check your edition, version and OS build with **Win+R > winver**. Build numbers
@@ -39,7 +39,7 @@ These upstream lists are broader than the application's tested OS coverage.
 The validated Linux family is **Ubuntu 24.04 LTS x86-64**, including local Ubuntu
 24.04.3 under WSL2/WSLg. Use an X11 graphical session or working XWayland: the
 embedded video adapter uses X11. Native Wayland without XWayland, other Ubuntu
-releases/distributions, ARM, musl/Alpine and macOS are not certified application
+releases/distributions, Linux ARM and musl/Alpine are not certified application
 targets, even where the upstream [.NET support matrix](https://github.com/dotnet/core/blob/main/release-notes/10.0/supported-os.md)
 lists additional systems. Bare-metal GPU combinations need separate validation.
 
@@ -71,6 +71,21 @@ Keep recordings with their companion LOG/sidecar files. In WSL, telemetry parsin
 through `/mnt/c` can be substantially slower than native Linux storage because
 of small random reads. The application does not relocate recordings. WSLg needs
 a working display and PulseAudio session; a headless shell alone is insufficient.
+
+## macOS versions and package types
+
+Local/private CI Mac Release packages require **macOS 26.0 or later**. The
+bundled native export tools impose this minimum, even when a managed component
+supports older systems. Apple Silicon uses `RegistratorViewer.Next-macos-arm64.zip`;
+Intel uses `RegistratorViewer.Next-macos-x64.zip`. Each ZIP contains a complete
+Finder `.app` with .NET 10, separate replaceable playback frameworks and FFmpeg/
+ffprobe. No development SDK, Homebrew or external media-tool installation is needed.
+
+The packages are architecture-specific, with technical ad-hoc signatures rather
+than Developer ID signing/notarization. Local Apple Silicon and Rosetta startup
+evidence do not certify native Intel GPUs or downloaded/quarantined clean-user
+launch. Public Mac assets remain pending their matching source-material gate;
+see the [current package availability](../README.md#downloads).
 
 ## Runtimes and included components
 
