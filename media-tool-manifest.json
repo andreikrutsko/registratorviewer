@@ -429,7 +429,7 @@
       ".github/workflows/localization.yml": "3a0df00a6a7205e5e84d3d82a642766181594590481755dfdfb61ed8c7458e66",
       ".github/workflows/macos-release.yml": "85a79a87543b4cba2f5d81433497bd20f4a118596676581214ed6f85e56dc0e5",
       ".github/workflows/macos-target.yml": "ebf3a70b5ace37838b535258d7479df5307979c629c42097349f68c99ee6a946",
-      ".github/workflows/release.yml": "edc3ee21e2cc6fb39b8bad75b7954904e52d666cc374f93d35cf31f36d4881c0",
+      ".github/workflows/release.yml": "79aeb7b9b0f63c24344a96c7c7284c46e5cc38e88940149ab02f26ea679f8366",
       ".github/workflows/reserve-version.yml": "fcd69b60c05f3122c44c88a3e371a82ec12abda274ddf2d780d549daabeb9559",
       ".github/workflows/verify-telegram.yml": "303ac320dfa09b76d79d6588215c6650895b945d00614aea1c246868d697dab5",
       "ABOUT.de-DE.md": "0c8faba19b734087bda18a3dcfd5ffaf39ef87fc2a62ba5c1d20bdcda0701c62",
