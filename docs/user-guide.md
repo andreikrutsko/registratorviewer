@@ -18,6 +18,11 @@ restore at the next launch, including at a different window size.
 
 Map tools support pan, route seeking, measurement, fit and combined position/heading follow. A manual map pan suspends following; Recenter resumes it. Choose an open map provider or configure a user-owned Google Maps API key. Provider labels and attribution remain visible.
 
+Select the ruler tool and click points on the map to measure a path. Each click
+adds a ring in the measurement line's color. Each segment shows its length in
+kilometers at its midpoint; the total uses your selected measurement system.
+Undo removes the last point and segment, and Clear removes the measurement.
+
 ## Cutting and joining
 
 Compatible video and audio are copied without re-encoding. If a stream cannot
