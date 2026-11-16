@@ -1,4 +1,4 @@
-RegistratorViewer.Next â€” third-party software notices
+RegistratorViewer.Next — third-party software notices
 
 Application source is maintained privately. This document does not grant an open-source license to the application's own code. The owner approved the current application distribution model on 2026-10-25.
 
@@ -16,7 +16,7 @@ Corresponding FFmpeg revision: https://github.com/FFmpeg/FFmpeg/commit/946fcce07
 Source and library licenses: https://ffmpeg.org/legal.html
 The original distributor's build README and GPL-3.0 license text are embedded. GPL obligations for these components remain independent of the application's private source. A general upstream URL alone must not be treated as proof that all corresponding-source distribution obligations have been met.
 
-d3dcompiler_47.dll â€” Microsoft proprietary component (shipped as d3dcompiler_43.dll)
+d3dcompiler_47.dll — Microsoft proprietary component (shipped as d3dcompiler_43.dll)
 Unmodified signed bytes distributed with the pinned mpv Windows package, SHA-256 4b074a3976399dc735484f5d43d04b519b7bdee8ac719d9ab8ed6bd4e6be0345. Normal-profile Windows inspection confirms Microsoft Corporation copyright, valid Microsoft Authenticode and version 10.0.18362.1. Its original/internal name is d3dcompiler_47.dll; the bytes exactly match Microsoft.Windows.SDK.CPP 10.0.18362.5, c/Redist/D3D/x64/d3dcompiler_47.dll. The distributor renamed the file without changing its bytes. The Windows SDK license and referenced redistribution list identify this unmodified compiler object code for Classic Windows apps, subject to their conditions. Full SDK terms are embedded. The owner approved this renamed/self-extracting delivery and the identified SDK conditions on 2026-10-25; no metadata waiver is required or applied. The earlier metadata-absence observation and the unrelated DXSDK compiler_43 comparison do not describe its actual origin. This is proprietary Microsoft software, not GPL/LGPL.
 https://www.nuget.org/packages/Microsoft.Windows.SDK.CPP/10.0.18362.5
 https://aka.ms/WinSDKLicenseURL
@@ -80,13 +80,22 @@ invoked as native external CLI/JSON-IPC processes; libmpv/libavcodec are not lin
 into the managed application. The existing exact GPL binary/source-risk decision
 above concerns the bundled Windows artifacts, not unidentified Linux binaries.
 
-GTK 3 and WebKitGTK 4.1/libsoup 3 are replaceable system shared libraries. GTK and
+GLib/GIO, GTK 3 and WebKitGTK 4.1/libsoup 3 are replaceable system shared libraries. GLib/GIO, GTK and
 relevant WebKit components use LGPL-2.1-or-later; WebKit also contains BSD-licensed
 components. They are not copied into the application bundle or modified here.
 Their applicable replacement, modification and debugging rights are preserved;
 this private application source policy does not remove those rights. Full LGPL
 2.1 text is included in LGPL-2.1.txt and the offline license catalog. Consult the
 installed package copyright files for exact system component/source information.
+Storage discovery calls the unmodified util-linux lsblk command through JSON
+output and can subscribe to the system UDisks2 D-Bus service when available.
+Neither command nor service is redistributed. Native GIO trash and GLib event
+handling use the replaceable LGPL system libraries above. Consult the installed
+util-linux, GLib and UDisks2 package copyright/source records for their exact
+versions and component-specific terms. macOS storage/trash use operating-system
+Disk Arbitration, CoreFoundation and Foundation frameworks; those are not copied
+into the application package.
+
 Windows instead uses the separately installed WebView2 Evergreen system runtime.
 
 SDK build-only dependency

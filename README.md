@@ -24,22 +24,30 @@ dependencies, and [installation](docs/installation.md) for setup instructions.
 
 ## Supported formats
 
+Video input supports MOV/MP4 and the tested Hikvision H.265/HEVC IPCAM
+MPEG-PS profile. Video exports use MOV/MP4.
+
 GPS track import supports GPX, TCX, FIT, NMEA, timed KML/KMZ, GeoJSON,
 CSV/TSV, OziExplorer PLT and General LOG files. The application identifies
 formats by their contents rather than the filename extension. Tracks need
 timestamps for synchronization with video. See the [GPS track guide](docs/user-guide.md#gps-tracks-and-corrections)
 for attachment, source selection and conversion.
 
+Folder import searches subfolders and can find associated GPS logs elsewhere on
+the scanned volume. External storage discovery adds recordings while playback
+continues and applies enabled automatic grouping. See [external storage](docs/user-guide.md#external-storage-and-recursive-discovery).
+
 ## Supported Models
 
-Support for MOV/MP4 recordings depends on the camera firmware, recording mode
-and available GPS or sensor data:
+Support for MOV/MP4 and the listed MPEG-PS recording profile depends on the
+camera firmware, recording mode and available GPS or sensor data:
 
 - **70mai:** 4K Omni (X800), A510, A810-2, A810S, A900, A900 Ultra, M300, M310 Plus, Rearview Dash Cam Wide (MIDRIVE D07), T800 4K.
 - **BlackVue:** ELITE 9, ELITE 10.
 - **CARCAM:** R2s.
 - **DDPAI:** mini, Mini5, Mola N3, N5 Dual.
 - **Garmin:** Dash Cam 57.
+- **Hikvision:** H.265/HEVC IPCAMs (MPEG-PS).
 - **Lexand:** LR300.
 - **Mini:** 0806.
 - **Mio:** MiVue 812, MiVue C530, MiVue C530 Pro, MiVue i95, MiVue J60, MiVue ViVa V51.
@@ -82,7 +90,12 @@ Check the **Assets** list for the packages available in each release.
 On Windows, launch the EXE. On Ubuntu, run
 `chmod u+x RegistratorViewer.Next-linux-x64` before launching the application.
 On macOS, extract the ZIP and keep the complete `RegistratorViewer.Next.app`.
-See [installation](docs/installation.md) for detailed instructions.
+The app has only an **ad hoc (technical) signature**, without Apple Developer ID
+signing or notarization. You must manually allow its first launch in
+**System Settings > Privacy & Security > Open Anyway**. Follow the
+[step-by-step macOS launch instructions](docs/run-unsigned-macos-app.md) for
+checksum verification, approval and the optional app-specific Terminal method.
+See [installation](docs/installation.md) for the remaining setup.
 
 Use `SHA256SUMS.txt` to verify your download. GitHub's automatic **Source code**
 archives contain this repository's documentation; install the application using
@@ -90,8 +103,8 @@ the packages listed above.
 
 ## Licenses
 
-See the [application license](LICENSE.txt), [third-party notices](THIRD_PARTY_NOTICES.md)
-and [full third-party license texts](THIRD_PARTY_LICENSES/). License texts are also
+See the [third-party notices](THIRD_PARTY_NOTICES.md) and
+[full third-party license texts](THIRD_PARTY_LICENSES/). License texts are also
 available offline through **? → Third-party Licenses** and About. Third-party
 source archives, when supplied, are listed among the release assets; see
 [source-material instructions](docs/installation.md#third-party-source-materials).

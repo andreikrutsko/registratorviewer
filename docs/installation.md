@@ -117,17 +117,20 @@ graphics limitations, see [system requirements](system-requirements.md#ubuntu-ve
 
 ## macOS Apple Silicon and Intel
 
-Mac packages currently come from local/private CI builds; public availability is
-listed in [Downloads](../README.md#downloads). Use macOS **26.0 or later** and select
+Use macOS **26.0 or later**. Choose
 `RegistratorViewer.Next-macos-arm64.zip` for Apple Silicon or
-`RegistratorViewer.Next-macos-x64.zip` for Intel. These are separate builds.
-Verify the ZIP's SHA-256 against the supplied checksum, extract it and keep the
-complete `RegistratorViewer.Next.app`, including its frameworks and media tools.
-No separate .NET, Homebrew, mpv or FFmpeg installation is required.
+`RegistratorViewer.Next-macos-x64.zip` for Intel from the
+[release downloads](../README.md#downloads). Verify the ZIP's SHA-256 against
+that release's checksum, extract it, and move the complete
+`RegistratorViewer.Next.app` to Applications. Runtime and media components are
+included; no separate .NET, Homebrew, mpv or FFmpeg installation is required.
 
-Current packages use ad-hoc technical signing. Developer ID/notarization and
-downloaded-app clean-user acceptance remain pending; local startup success does
-not establish Gatekeeper acceptance for a downloaded archive.
+The app has only an **ad hoc (technical) signature**, without Apple Developer ID
+signing or notarization. Its first launch requires manual authorization in
+**System Settings > Privacy & Security > Open Anyway**. Follow the
+[detailed macOS launch guide](run-unsigned-macos-app.md) for the exact sequence,
+checksum checks, troubleshooting and an optional app-specific Terminal method.
+Do not re-sign the downloaded release as an installation step.
 
 ### Third-party source materials
 

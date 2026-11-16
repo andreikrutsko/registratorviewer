@@ -295,12 +295,22 @@
   "linuxBrowser": {
     "delivery": "Replaceable system shared libraries, not a bundled browser runtime",
     "components": [
+      "GLib/GIO",
       "GTK 3",
       "WebKitGTK 4.1",
       "libsoup 3"
     ],
     "license": "LGPL-2.1-or-later and component-specific BSD terms",
     "fullLicense": "THIRD_PARTY_LICENSES/LGPL-2.1.txt"
+  },
+  "linuxStorage": {
+    "delivery": "Replaceable OS packages; no bundled command or service",
+    "command": "util-linux lsblk",
+    "optionalService": "UDisks2 D-Bus",
+    "libraries": [
+      "GLib/GIO"
+    ],
+    "licenseSource": "Installed package copyright and source-package records under /usr/share/doc"
   },
   "macMedia": {
     "delivery": "Separate replaceable shared frameworks and FFmpeg CLI tools",

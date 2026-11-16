@@ -1,6 +1,6 @@
 # System requirements
 
-Paired releases provide two self-contained x64 executables under one version:
+Windows and Ubuntu releases provide self-contained x64 executables under one version:
 `RegistratorViewer.Next.exe` for Windows and `RegistratorViewer.Next-linux-x64`
 for Ubuntu. Each includes .NET 10; no SDK or separate .NET runtime is required.
 Browser, graphics and Linux media prerequisites remain system packages. Earlier
@@ -74,18 +74,18 @@ a working display and PulseAudio session; a headless shell alone is insufficient
 
 ## macOS versions and package types
 
-Local/private CI Mac Release packages require **macOS 26.0 or later**. The
-bundled native export tools impose this minimum, even when a managed component
-supports older systems. Apple Silicon uses `RegistratorViewer.Next-macos-arm64.zip`;
-Intel uses `RegistratorViewer.Next-macos-x64.zip`. Each ZIP contains a complete
-Finder `.app` with .NET 10, separate replaceable playback frameworks and FFmpeg/
-ffprobe. No development SDK, Homebrew or external media-tool installation is needed.
+Mac releases require **macOS 26.0 or later**. Apple Silicon uses
+`RegistratorViewer.Next-macos-arm64.zip`; Intel uses
+`RegistratorViewer.Next-macos-x64.zip`. Each ZIP contains the complete
+`RegistratorViewer.Next.app` with its runtime and media components. No development
+SDK, Homebrew or external media-tool installation is needed. See the
+[available packages](../README.md#downloads).
 
-The packages are architecture-specific, with technical ad-hoc signatures rather
-than Developer ID signing/notarization. Local Apple Silicon and Rosetta startup
-evidence do not certify native Intel GPUs or downloaded/quarantined clean-user
-launch. Public Mac assets remain pending their matching source-material gate;
-see the [current package availability](../README.md#downloads).
+The application has an **ad hoc (technical) signature**, without Apple Developer
+ID signing or notarization. You must manually authorize the downloaded app's
+first launch through **System Settings > Privacy & Security > Open Anyway**.
+See [the macOS launch instructions](run-unsigned-macos-app.md) for verification,
+manual approval and the optional scoped Terminal procedure.
 
 ## Runtimes and included components
 

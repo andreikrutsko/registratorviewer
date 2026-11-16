@@ -1,12 +1,27 @@
 # Quick start
 
-Open MOV/MP4 recordings or a folder. Select a file or a compatible group to play it continuously. Click or drag the timeline/charts to seek; use the mouse wheel over that area to zoom. Details/F8 controls hover telemetry.
+On macOS, the app has only an **ad hoc (technical) signature** and requires
+manual permission at first launch. Before opening recordings, follow the
+[macOS verification and launch instructions](run-unsigned-macos-app.md), including
+**Privacy & Security > Open Anyway**. Runtime and media components are included.
+
+Open supported MOV/MP4 or Hikvision MPEG-PS recordings, or a folder. Select a file or a compatible group to play it continuously. Click or drag the timeline/charts to seek; use the mouse wheel over that area to zoom. Details/F8 controls hover telemetry.
+
+Wheel zoom keeps the timestamp under the pointer in place. The inspected chart
+area stays visible during background position updates; seeking or starting
+playback restores following of the playback cursor. With Loop A–B enabled,
+the charts continue following the selected playback range.
 
 Set selection A and B to prepare a Cutting export. Video zoom, flips and pan are display settings and do not change the exported compressed video.
 
 Double-click the video to enter video fullscreen; Escape returns. Choose a language in View → Language; no restart is needed.
 
 The instrument cluster shows speed, current track distance, available recorded altitude, compass heading and acceleration. Missing values use dashes. Details/F8 also controls the instrument hover tooltips: altitude/distance/speed, compass direction and instantaneous X/Y/Z. Metric/British units apply to the instruments and their hover text together.
+
+Acceleration peak dots also show their values, including negative peaks on
+signed axes. Speed charts label the maximum in each recording fragment without
+adding dots; gaps in GPS data separate fragments. Labels follow the selected
+units and language. Zooming preserves the original peak selection.
 
 **View > Measurement** also updates file-list speed/distance captions and values,
 charts, maps and hover text immediately. **View > Time Zone** changes displayed
@@ -22,6 +37,37 @@ Select the ruler tool and click points on the map to measure a path. Each click
 adds a ring in the measurement line's color. Each segment shows its length in
 kilometers at its midpoint; the total uses your selected measurement system.
 Undo removes the last point and segment, and Clear removes the measurement.
+
+## External storage and recursive discovery
+
+Opening a folder searches its accessible subfolders as well. Names and filename
+extensions do not determine whether a recording or GPS log is recognized. Logs
+in another folder on the scanned volume can be paired by their matching basename;
+General LOG camera-letter pairing remains supported.
+
+Launching the app from an external USB SSD, flash drive or memory card starts a
+scan of that volume. For other connected external volumes, choose Yes or No in
+the notification at the top. **File > Scan connected storage** lets you select a
+volume yourself, including an internal disk. Internal disks are scanned only
+with your consent.
+
+Found recordings are added to the current list while playback continues. Enabled
+automatic grouping applies; manual groups and A/B selections are retained. The
+progress bar shows discovery and analysis, and **Cancel discovery** stops finding
+more files. A small device profile remembers successfully recognized formats for
+later scans; each file is still checked. An unplugged device stops its playback.
+Scan a reconnected device again before using entries from its earlier connection.
+
+## Background file analysis
+
+A progress bar at the top remains visible while recordings are being analyzed.
+Playback, navigation and the main menu remain available. Commands that need the
+completed analysis display a message explaining when they will be available.
+Clear File List stops playback and clears the video as well as the recording list.
+
+Hikvision H.265/HEVC IPCAMs (MPEG-PS) are recognized by their contents, including
+Program Stream files named with an MP4 extension. Use MOV to retain their native
+mu-law audio without conversion. Recorded audio delays remain unchanged.
 
 ## Cutting and joining
 
@@ -45,16 +91,16 @@ filesystem/access problems are reported separately.
 ## Copy, protect and delete recording files
 
 The recording-list context menu and toolbar can copy selected recordings,
-protect them with the file's read-only attribute, or move unlocked video files
+protect them with native read-only attributes or write permissions, or move unlocked video files
 to the system trash. Group commands apply to their member videos; a lock icon
 also marks groups with only some protected members. Unlock removes that file
-protection. Removing an entry from the list still leaves the file on disk.
+protection, restoring the original write permissions where available. Associated GPS logs are protected too. Removing an entry from the list still leaves the file on disk.
 
 **Copy File to Computer** selects a destination folder, copies video members
 and associated GPS logs without re-encoding, and preserves modification times
 within the destination filesystem's precision. Its progress window shows files,
 bytes, percentage, elapsed time, speed and remaining time, with pause/resume,
-cancel and Open Folder. Cancelling keeps completed copies and removes partial
+cancel and Open Folder, while the main player remains usable. Filesystem failures offer applicable retry, skip and cancel actions. Unsupported metadata is reported separately from a successful data copy. Cancelling keeps completed copies and removes partial
 outputs. Existing files require an explicit skip/replace choice; protected
 outputs and source files cannot be overwritten. Copied recordings retain local
 GPS source and correction settings when their complete group was copied.
@@ -116,7 +162,11 @@ GeoJSON accepts time-bearing Points and LineString/MultiLineString arrays named
 Untimed map geometry cannot be attached to video.
 
 **View > Fix Coordinates** reflects longitude/latitude signs and shifts the
-route in degrees/DMS or metres east/north. Reflections run before shifts.
+route in degrees/DMS or metres east/north. **Shift coordinates** opens one dialog
+for both axes. Select **Coordinate shift units** first: angular fields are
+editable in Degrees/DMS mode, and East/North fields in Metres mode. Inactive
+values are retained when switching units. Negative East/North values shift west
+or south. Reflections run before shifts.
 Choose current-video or group scope in the correction dialog; direct menu
 toggles apply to the group. Preview/reset is available. **Calculate Speed and
 Heading Only by Coordinates** uses compatible consecutive valid positions,
@@ -153,6 +203,11 @@ Open **Renderer diagnostics** in the same submenu to see the actual GPU context,
 RegistratorViewer.Next checks for a newer stable GitHub release once after startup. If one is available, confirm the prompt to open its release page in your browser. Choose **? → Check for new version** to check manually. Offline automatic checks stay silent; manual checks report network errors or temporary GitHub limits. The check never downloads or installs application files and does not send recording paths, GPS/G-force data or API keys.
 
 ## Camera groups
+
+Automatic grouping allows gaps of up to **60 seconds** by default for every
+supported recording type and camera model. Source timestamps and gaps remain
+on the timeline. Adjust the allowance in **Find Groups Automatically**; disabling
+automatic grouping and explicit manual ungrouping remain respected.
 
 Front (A) and rear (B) recordings stay in separate groups, even when their times and codecs match. Manual grouping also rejects mixed A/B selections. Recognized recording metadata remains authoritative. When it is unavailable, supported timestamped filenames, including yyyy_MMdd_HHmmss, provide a fallback; the configured gap tolerance and stream compatibility checks still apply.
 
