@@ -697,7 +697,7 @@
       "tools/prepare_desktop_release_metadata.py": "2f065d761de3c545caa286b35d8c1168faf17b199410637e58b6d1326c2ab24e",
       "tools/publish.py": "4b9d8c3e224f05ac2903371f65204dfed30b3208b04317c0f7f81e79c0ac45d5",
       "tools/release_layout.py": "fb74d406ffb44d8aa76024a7a51f4efb38dc7eef470897749c07572940b97242",
-      "tools/reserve_version.py": "9f0cc152151ea88b1e5b45d849ae44b91774aae93befd2634c86bc163019007b",
+      "tools/reserve_version.py": "39d1065be09a2c694eca4087ce010d6aa198dfbb52ccdd5634b1fd53fd5a6d71",
       "tools/smoke_avalonia_release.py": "c93b98fce9794dce65c7695b6c8af2fdae6fe37259c60abbe21e24dede54b4de"
     },
     "auditStatusBeforeOwnerApproval": "LEGAL_REVIEW_REQUIRED",
