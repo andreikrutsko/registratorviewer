@@ -696,7 +696,7 @@
       "tools/ci/macos_source_materials/REPLACE-LIBRARIES.md": "dbc055b09e7248dc44d4393c9164b21cf8b54034720d74a711741f27afdb0a15",
       "tools/ci/macos_source_materials/build-export-tools.py": "0a39d17d9abbcd9727ae3c0c5a001d9f3a33ea1cfc9d0a9d80c6341a005c7890",
       "tools/ci/macos_source_materials/build-playback-replacement.py": "24457ad002f673944996fa61f8e3dd0f8069418bb1c6a0574a953d6939059226",
-      "tools/ci/macos_sources.py": "1610880431ab809525937e23de8497c00d84bbcc6ed82115ca72632fb10b0e99",
+      "tools/ci/macos_sources.py": "109ba09e91fda17fcd9d4f774bbcdc2e983b291b829974598d49cecdd0cac23c",
       "tools/ci/prepare_media_payload.py": "a6def792b7b85e6c25806e312a6eb4c72fcbd49a3036a658650db34186b220f6",
       "tools/ci/prepare_release_sources.py": "a6019281bab541ce16dd2357d95f88289aceafa11d6722d1711079d86f0514a4",
       "tools/ci/publish_release.py": "6714caa74cbb08599d43103e2b5836608d2120b7d270ae3b078ccbe165c21c03",
