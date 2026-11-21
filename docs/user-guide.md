@@ -119,12 +119,38 @@ uses the desktop GIO trash service. Partial failures retain the remaining entrie
 ## GPS tracks and corrections
 
 **Attach Track** opens timestamped GPX, TCX, FIT, NMEA, timed KML/KMZ,
-GeoJSON, CSV/TSV, OziExplorer PLT and General LOG files. The application detects
+GeoJSON, CSV/TSV, OziExplorer PLT, General LOG files and 70mai GPSData V02 journals. The application detects
 content rather than trusting the filename extension. The preview shows time
 intervals, usable points, segments and the route before saving a binding.
 Original video, GPS logs and G-sensor samples remain unchanged. General LOG
 files use the supported timestamped eleven-field A/V row profile, including
 Mini 0806 recordings; the `.log` extension alone does not establish compatibility.
+
+### 70mai GPSData V02
+
+Keep the shared `GPSData*.txt` journals together with your recordings. You can
+open a full memory-card copy, a partial Front/Rear copy, a flat folder, or one
+video with its original name. The app looks for a matching journal in the
+video's folder and its parent folders. Multiple journals are supported; the
+`$V02` contents and complete video identity establish the association. Normal,
+Event, Parking and Lapse folder names are not required. Smaller `.s_Front`
+copies are omitted during folder scans; you can still open one explicitly.
+
+Use **Attach Track** when the journal is stored separately. Existing GPS source
+settings let you select built-in or external coordinates and adjust the time
+offset. The initial interval before GPS acquisition stays empty. Recorder clock
+alignment is estimated from video identities; it is not proof of absolute UTC.
+Check the preview and use a verified recording time/manual offset if the clocks
+are uncertain. Use **Refresh File List** after replacing or updating a journal.
+
+The route includes recorded speed and course. Uncalibrated acceleration counts
+are retained in the source information and saved video telemetry, without being
+displayed as physical g. Saving a fragment or joining files includes only the
+selected telemetry in the saved video's RV telemetry archive. Renamed outputs
+reopen with their route; the shared original journal is not rewritten or copied
+wholesale. GPS tracks can also be exported in the existing output formats.
+
+### Preview and source selection
 
 GPS preview dialogs have adjustable vertical panes: fields, compact information
 and actions on the left, a full-height map on the right. The map uses the same
@@ -136,7 +162,7 @@ GPS import, corrections and export remain available without a map connection.
 Automatic companions match the complete filename stem, such as `clip.mp4`
 and `clip.gpx`, even when the GPS file has a different extension. The Mini
 0806 camera-letter naming rule is preserved. Initial detected-format priority
-is GPX, TCX, FIT, NMEA, KML/KMZ, GeoJSON, CSV/TSV, PLT, then General LOG files.
+is GPX, TCX, FIT, NMEA, KML/KMZ, GeoJSON, CSV/TSV, PLT, General LOG files, then 70mai GPSData V02.
 **GPS tracks and source settings** can reorder formats, save that order for
 new recordings, select a preferred external source, edit offsets, disable,
 detach or relink files. Ambiguous equal-priority candidates require an

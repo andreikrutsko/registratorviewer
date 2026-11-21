@@ -32,7 +32,7 @@ Video input supports MOV/MP4 and the tested Hikvision H.265/HEVC IPCAM
 MPEG-PS profile. Video exports use MOV/MP4.
 
 GPS track import supports GPX, TCX, FIT, NMEA, timed KML/KMZ, GeoJSON,
-CSV/TSV, OziExplorer PLT and General LOG files. The application identifies
+CSV/TSV, OziExplorer PLT, General LOG files and 70mai GPSData V02 journals. The application identifies
 formats by their contents rather than the filename extension. Tracks need
 timestamps for synchronization with video. See the [GPS track guide](docs/user-guide.md#gps-tracks-and-corrections)
 for attachment, source selection and conversion.
