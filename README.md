@@ -2,6 +2,10 @@
 
 Cross-platform dashcam player for Windows x64, Ubuntu x64 and macOS on Apple Silicon or Intel, with continuous grouped playback, GPS routes, G-sensor charts, online maps, video zoom and screenshots, and lossless cutting and merging.
 
+Compatible synchronized camera recordings appear in expandable sections. Play
+the section in two, three or four video panes, or select one camera to play it
+alone. See [multicamera playback](docs/user-guide.md#multicamera-playback).
+
 The application offers English, German, Polish, Lithuanian and Ukrainian interfaces. Language changes apply immediately.
 
 ## System requirements

@@ -31,6 +31,10 @@ Dragging the separators between video/sidebar, map/file list and video/timeline
 saves their proportions. These choices persist in the user's home YAML file and
 restore at the next launch, including at a different window size.
 
+Drag the right edge of a recording-list column heading to change its width.
+The headings and recording rows stay aligned, and your column widths are
+restored at the next launch. Resizing does not select, open or sort a recording.
+
 Map tools support pan, route seeking, measurement, fit and combined position/heading follow. A manual map pan suspends following; Recenter resumes it. Choose an open map provider or configure a user-owned Google Maps API key. Provider labels and attribution remain visible.
 
 Select the ruler tool and click points on the map to measure a path. Each click
@@ -210,6 +214,31 @@ on the timeline. Adjust the allowance in **Find Groups Automatically**; disablin
 automatic grouping and explicit manual ungrouping remain respected.
 
 Front (A) and rear (B) recordings stay in separate groups, even when their times and codecs match. Manual grouping also rejects mixed A/B selections. Recognized recording metadata remains authoritative. When it is unavailable, supported timestamped filenames, including yyyy_MMdd_HHmmss, provide a fallback; the configured gap tolerance and stream compatibility checks still apply.
+
+## Multicamera playback
+
+With automatic grouping enabled, recordings with matching camera identities
+and confirmed common recording times appear in an expandable **Multicamera**
+section. Consecutive recordings are grouped within each camera first. Expand
+the section to see those camera groups; selecting a child plays that camera
+alone. Selecting the section plays its cameras together and preserves the
+current recording time and playback state when switching between these views.
+
+Two cameras use top and bottom panes. Three or four cameras use a four-pane
+layout, with an empty black pane for three cameras. Drag the dividers to change
+the proportions. Video keeps its aspect ratio. Wheel zoom and dragging apply
+to the camera under the pointer; video zoom commands in the top menu apply to
+all panes.
+
+The camera supplying sound has a thin green outline. Click another camera to
+select its sound. GPS, charts and the timeline remain shared. If one camera has
+no recording at the current time, only its pane becomes black. Playback skips
+an interval automatically when all cameras are missing; only those common gaps
+are marked on the shared timeline.
+
+Cutting and joining a selected section opens the existing export workflow for
+each camera in sequence. Each output keeps that camera's compressed streams
+unless you explicitly choose conversion in an incompatibility dialog.
 
 ## GPS acquisition
 
